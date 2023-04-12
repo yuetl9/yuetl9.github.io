@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Homepage</title>
+  
+  
+  <link href="https://yuetl9.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://yuetl9.github.io/"/>
+  <updated>2023-04-12T18:17:00.333Z</updated>
+  <id>https://yuetl9.github.io/</id>
+  
+  <author>
+    <name>Yuetai Li</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>homepage</title>
+    <link href="https://yuetl9.github.io/hello-world.html"/>
+    <id>https://yuetl9.github.io/hello-world.html</id>
+    <published>2099-09-09T01:09:09.000Z</published>
+    <updated>2023-04-12T18:17:00.333Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="About-Me"><a href="#About-Me" class="headerlink" title="About Me"></a>About Me</h1><p>I am an undergraduate major in Communication Engineering at University of Electronic Science and Technology of China (UESTC) and University of Glasgow (UofG). During my undergrad, I am advised by Prof. Lei Zhang from the University of Glasgow. My [CV](updated 12.23, 2022) shows more details.</p><h1 id="Research-Interests"><a href="#Research-Interests" class="headerlink" title="Research Interests"></a>Research Interests</h1><p>It is worth noting that there are three different consensus theories known in control, distributed computer systems, and human social psychology. It seems that consensus shows its significance in the philosophy of distributed scenarios. I summarize that they emphasize group intelligence to be dynamic, reliable, and cognitive, respectively. My previous work aimed to explore consensus of computers in distributed intelligent systems for reliability. For my future research, exploring the fundamental philosophy behind three consensus theories, and finding new application scenarios or theory foundations of consensus is an intriguing topic. My <a href="https://yuetl9.github.io/files/Research_Proposal.pdf">Research Proposal</a> shows more detals.</p><h1 id="Publications"><a href="#Publications" class="headerlink" title="Publications"></a>Publications</h1><p>(Updated 12. 23, 2022)</p><ol><li>Zhangchen Xu, <strong>Yuetai Li</strong>, Chenglin Feng, Lei Zhang, “Voting Validity: Exact Fault-tolerant Consensus”, Accepted by the 37th IEEE International Parallel &amp; Distributed Processing Symposium (IPDPS), December 2022</li><li><strong>Yuetai Li</strong>, Yixuan Fan, Lei Zhang, Jon Crowcroft, “RAFT Consensus Reliability in Wireless Networks: Probabilistic Analysis”, submitted to IEEE Internet of Things Journal, May 2022, under review</li><li><strong>Yuetai Li</strong>, Zhangchen Xu, Lei Zhang, “A Modularized Framework of Communication in Consensus and Consensus Network Reliability Analysis”, in progress</li><li>Dachao Yu, Yao Sun, <strong>Yuetai Li</strong>, Lei Zhang, “Communication Resource Allocation of Raft in Wireless Network”, submitted to Elsevier Digital Communications and Networks, November 2022, under review</li><li><strong>Yuetai Li</strong>, Tong Tong, Benhao Pan, Huajun Yang, Ping Jiang, Weinan Caiyang, “Three-mirror system design for shaping the elliptical beam of a laser diode”, Published in Elsevier Optik, Volume 264, 2022</li><li><strong>Yuetai Li</strong>, Xinbin Chen, Jiale Wang, Tao Zhan, Huajun Yang, Weinan Caiyang, Ping Jiang, “Shaping and transmitting elliptical beam from laser diode by off-axis quadric reflective mirrors”, Published in Elsevier Optics Communications, Volume 493, 2021</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;About-Me&quot;&gt;&lt;a href=&quot;#About-Me&quot; class=&quot;headerlink&quot; title=&quot;About Me&quot;&gt;&lt;/a&gt;About Me&lt;/h1&gt;&lt;p&gt;I am an undergraduate major in Communication E</summary>
+      
+    
+    
+    
+    
+    <category term="Example" scheme="https://yuetl9.github.io/tags/Example/"/>
+    
+  </entry>
+  
+</feed>
