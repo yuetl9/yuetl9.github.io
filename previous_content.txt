@@ -1,7 +1,4 @@
 
-
-
-<!-- 
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -83,7 +80,7 @@
       .header_wrap {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 1rem 1.5rem;
+        padding: 1rem; /* 统一左右内边距 */
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -106,6 +103,13 @@
       }
       .menus_item a.site-page:hover {
         color: #007bff;
+      }
+      /* 去除菜单按钮默认的边距和内边距 */
+      .menus_icon {
+        background: none;
+        border: none;
+        margin: 0;
+        padding: 0;
       }
 
       /* =============================
@@ -315,7 +319,7 @@
               <strong>Small Model Learnability Gap</strong>: Small models do not consistently benefit from long CoT or distillation from large teachers. Instead, they perform better on shorter, simpler reasoning chains that better align with their intrinsic learning capacity. We propose <em>Mix Distillation</em>, a simple yet effective strategy that combines both long and short CoT examples or reasoning from both large and small teachers.
             </li>
             <li>
-              <strong>MagpieLM</strong>: We maintained the official Magpie Hugging Face repository and released open-sourced synthetic data generated from open-source LMs. Our aligned MagpieLM models are still <strong>SOTA</strong> small language models for chat.
+              <strong><a href="https://huggingface.co/collections/Magpie-Align/magpielm-66e2221f31fa3bf05b10786a">Magpie</a></strong>: We maintained the official Magpie Hugging Face repository and released open-sourced synthetic data generated from open-source LLMs. Our aligned MagpieLM models are still <strong>SOTA</strong> small language models for chat.
             </li>
             <li>
               <strong>SafeChain</strong>: Investigated how long CoT impacts safety and revealed that long CoT does not necessarily enhance safety. We introduced SafeChain, a dataset designed to improve safety alignment while preserving reasoning capabilities.
@@ -430,5 +434,3 @@
   </body>
 </html>
 
-
- -->
