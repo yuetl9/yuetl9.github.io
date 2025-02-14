@@ -434,3 +434,162 @@
   </body>
 </html>
 
+<!-- <!DOCTYPE html><html lang="English"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"><title>Homepage</title><meta name="author" content="Yuetai Li"><link rel="shortcut icon" href="/image/favicon.png"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Homepage" type="application/atom+xml">
+</head><body><header id="page_header"><div class="header_wrap"><div id="blog_name"><a class="blog_title" id="site-name" href="/">Homepage</a></div><button class="menus_icon"><div class="navicon"></div></button><ul class="menus_items"><li class="menus_item"><a class="site-page" href="/files/cv.pdf"> CV</a></li><li class="menus_item"><a class="site-page" href="/files/Research_Proposal.pdf"> Research Proposal</a></li></ul></div></header><main id="page_main"><div class="side-card sticky"><div class="card-wrap" itemscope itemtype="http://schema.org/Person"><div class="author-avatar"><img class="avatar-img" src="/image/profile.jpg" onerror="this.onerror=null;this.src='/img/profile.png'" alt="avatar"></div><div class="author-discrip"><h3>Yuetai Li</h3><p class="author-bio">yuetaili@uw.edu yuetail9@163.com</p></div><div class="author-links"><button class="btn m-social-links">Links</button></div></div></div><div class="page" itemscope itemtype="http://schema.org/CreativeWork"><article><h1 id="About-Me"><a href="#About-Me" class="headerlink" title="Bio"></a>About Me</h1><p>
+    I am a second-year PhD student at 
+    <a href="https://labs.ece.uw.edu/nsl/faculty/radha/" target="_blank" title="Network Security Lab">Network Security Lab</a> at University of Washington, advised by <a href="https://people.ece.uw.edu/radha/" target="_blank" title="Prof. Radha Poovendran's Webpage">Prof. Radha Poovendran</a>. I also work closely with 
+    <a href="https://xiangyue9607.github.io/" target="_blank" title="Yue Xiang's Webpage">Dr. Yue Xiang</a> from CMU LTI and <a href="https://zhangchenxu.com/">Zhangchen Xu</a> from UW. Prior to UW, I obtained my Bachelor degree in Communication Engineering at University of Glasgow (UofG) and University of Electronic Science and Technology of China (UESTC). During my undergrad, I was advised by Prof. Lei Zhang from the University of Glasgow. My 
+    CV (updated 12.25, 2022) shows more details.</p>
+<h1 id="Research-Interests"><a href="#Research-Interests" class="headerlink" title="Research Interests"></a>Research Interests</h1><p>It is worth noting that there are three different consensus theories known in control, distributed computer systems, and human social psychology. It seems that consensus shows its significance in the philosophy of distributed scenarios. I summarize that they emphasize group intelligence to be dynamic, reliable, and cognitive, respectively. My previous work aimed to explore consensus of computers in distributed intelligent systems for reliability. For my future research, exploring the fundamental philosophy behind three consensus theories, and finding new application scenarios or theory foundations of consensus is an intriguing topic. My <a href="https://yuetl9.github.io/files/Research_Proposal.pdf">Research Proposal</a> shows more detals.</p>
+<h1 id="Publications"><a href="#Publications" class="headerlink" title="Publications"></a>Publications</h1><p>(Updated 12. 23, 2022)</p>
+<ol>
+<li>Zhangchen Xu, <strong>Yuetai Li</strong>, Chenglin Feng, Lei Zhang, “Voting Validity: Exact Fault-tolerant Consensus”, Accepted by the 37th IEEE International Parallel &amp; Distributed Processing Symposium (IPDPS), December 2022</li>
+<li><strong>Yuetai Li</strong>, Yixuan Fan, Lei Zhang, Jon Crowcroft, “RAFT Consensus Reliability in Wireless Networks: Probabilistic Analysis”, submitted to IEEE Internet of Things Journal, May 2022, under review</li>
+<li><strong>Yuetai Li</strong>, Zhangchen Xu, Lei Zhang, “A Modularized Framework of Communication in Consensus and Consensus Network Reliability Analysis”, in progress</li>
+<li>Dachao Yu, Yao Sun, <strong>Yuetai Li</strong>, Lei Zhang, “Communication Resource Allocation of Raft in Wireless Network”, submitted to Elsevier Digital Communications and Networks, November 2022, under review</li>
+<li><strong>Yuetai Li</strong>, Tong Tong, Benhao Pan, Huajun Yang, Ping Jiang, Weinan Caiyang, “Three-mirror system design for shaping the elliptical beam of a laser diode”, Published in Elsevier Optik, Volume 264, 2022</li>
+<li><strong>Yuetai Li</strong>, Xinbin Chen, Jiale Wang, Tao Zhan, Huajun Yang, Weinan Caiyang, Ping Jiang, “Shaping and transmitting elliptical beam from laser diode by off-axis quadric reflective mirrors”, Published in Elsevier Optics Communications, Volume 493, 2021</li>
+</ol>
+</article></div></main><div class="nav-wrap"><div class="nav"><button class="site-nav"><div class="navicon"></div></button><ul class="nav_items"><li class="nav_item"><a class="nav-page" href="/files/cv.pdf"> CV</a></li><li class="nav_item"><a class="nav-page" href="/files/Research_Proposal.pdf"> Research Proposal</a></li></ul></div><div class="cd-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></div></div><footer id="page_footer"><div class="footer_wrap"><div class="copyright">&copy;2022 - 2023 by Yuetai Li</div><div class="theme-info">Powered by <a target="_blank" href="https://hexo.io" rel="nofollow noopener">Hexo</a> & <a target="_blank" href="https://github.com/PhosphorW/hexo-theme-academia" rel="nofollow noopener">Academia Theme</a></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery-pjax@latest/jquery.pjax.min.js"></script><script src="/js/main.js"></script></body></html> -->
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="English">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    <title>Homepage</title>
+    <meta name="author" content="Yuetai Li">
+    <link rel="shortcut icon" href="/image/favicon.png">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css">
+    <meta name="generator" content="Hexo 6.3.0">
+    <link rel="alternate" href="/atom.xml" title="Homepage" type="application/atom+xml">
+  </head>
+  <body>
+    <header id="page_header">
+      <div class="header_wrap">
+        <div id="blog_name">
+          <a class="blog_title" id="site-name" href="/">Homepage</a>
+        </div>
+        <button class="menus_icon">
+          <div class="navicon"></div>
+        </button>
+        <ul class="menus_items">
+          <li class="menus_item">
+            <a class="site-page" href="/files/cv.pdf"> CV</a>
+          </li>
+          <li class="menus_item">
+            <a class="site-page" href="/files/Research_Proposal.pdf"> Research Proposal</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main id="page_main">
+      <div class="side-card sticky">
+        <div class="card-wrap" itemscope itemtype="http://schema.org/Person">
+          <div class="author-avatar">
+            <img class="avatar-img" src="/image/profile.jpg" onerror="this.onerror=null;this.src='/img/profile.png'" alt="avatar">
+          </div>
+          <div class="author-discrip">
+            <h3>Yuetai Li</h3>
+            <p class="author-bio">yuetaili@uw.edu yuetail9@163.com</p>
+          </div>
+          <div class="author-links">
+            <button class="btn m-social-links">Links</button>
+          </div>
+        </div>
+      </div>
+      <div class="page" itemscope itemtype="http://schema.org/CreativeWork">
+        <article>
+          <h1 id="About-Me">
+            <a href="#About-Me" class="headerlink" title="Bio"></a>About Me
+          </h1>
+          <p>
+            I am a second-year PhD student at 
+            <a href="https://labs.ece.uw.edu/nsl/faculty/radha/" target="_blank" title="Network Security Lab">
+              Network Security Lab
+            </a> at University of Washington, advised by 
+            <a href="https://people.ece.uw.edu/radha/" target="_blank" title="Prof. Radha Poovendran's Webpage">
+              Prof. Radha Poovendran
+            </a>. I also work closely with 
+            <a href="https://xiangyue9607.github.io/" target="_blank" title="Yue Xiang's Webpage">
+              Dr. Yue Xiang
+            </a> from CMU LTI and 
+            <a href="https://zhangchenxu.com/">
+              Zhangchen Xu
+            </a> from UW. Prior to UW, I obtained my Bachelor degree in Communication Engineering at University of Glasgow (UofG) and University of Electronic Science and Technology of China (UESTC). During my undergrad, I was advised by Prof. Lei Zhang from the University of Glasgow. My CV (updated 12.25, 2022) shows more details.
+          </p>
+          <h1 id="Research-Interests">
+            <a href="#Research-Interests" class="headerlink" title="Research Interests"></a>Research Interests
+          </h1>
+          <p>
+            It is worth noting that there are three different consensus theories known in control, distributed computer systems, and human social psychology. It seems that consensus shows its significance in the philosophy of distributed scenarios. I summarize that they emphasize group intelligence to be dynamic, reliable, and cognitive, respectively. My previous work aimed to explore consensus of computers in distributed intelligent systems for reliability. For my future research, exploring the fundamental philosophy behind three consensus theories, and finding new application scenarios or theory foundations of consensus is an intriguing topic. My 
+            <a href="https://yuetl9.github.io/files/Research_Proposal.pdf">
+              Research Proposal
+            </a> shows more detals.
+          </p>
+          <h1 id="Publications">
+            <a href="#Publications" class="headerlink" title="Publications"></a>Publications
+          </h1>
+          <p>(Updated 12. 23, 2022)</p>
+          <ol>
+            <li>
+              Zhangchen Xu, <strong>Yuetai Li</strong>, Chenglin Feng, Lei Zhang, “Voting Validity: Exact Fault-tolerant Consensus”, Accepted by the 37th IEEE International Parallel &amp; Distributed Processing Symposium (IPDPS), December 2022
+            </li>
+            <li>
+              <strong>Yuetai Li</strong>, Yixuan Fan, Lei Zhang, Jon Crowcroft, “RAFT Consensus Reliability in Wireless Networks: Probabilistic Analysis”, submitted to IEEE Internet of Things Journal, May 2022, under review
+            </li>
+            <li>
+              <strong>Yuetai Li</strong>, Zhangchen Xu, Lei Zhang, “A Modularized Framework of Communication in Consensus and Consensus Network Reliability Analysis”, in progress
+            </li>
+            <li>
+              Dachao Yu, Yao Sun, <strong>Yuetai Li</strong>, Lei Zhang, “Communication Resource Allocation of Raft in Wireless Network”, submitted to Elsevier Digital Communications and Networks, November 2022, under review
+            </li>
+            <li>
+              <strong>Yuetai Li</strong>, Tong Tong, Benhao Pan, Huajun Yang, Ping Jiang, Weinan Caiyang, “Three-mirror system design for shaping the elliptical beam of a laser diode”, Published in Elsevier Optik, Volume 264, 2022
+            </li>
+            <li>
+              <strong>Yuetai Li</strong>, Xinbin Chen, Jiale Wang, Tao Zhan, Huajun Yang, Weinan Caiyang, Ping Jiang, “Shaping and transmitting elliptical beam from laser diode by off-axis quadric reflective mirrors”, Published in Elsevier Optics Communications, Volume 493, 2021
+            </li>
+          </ol>
+        </article>
+      </div>
+    </main>
+    <div class="nav-wrap">
+      <div class="nav">
+        <button class="site-nav">
+          <div class="navicon"></div>
+        </button>
+        <ul class="nav_items">
+          <li class="nav_item">
+            <a class="nav-page" href="/files/cv.pdf"> CV</a>
+          </li>
+          <li class="nav_item">
+            <a class="nav-page" href="/files/Research_Proposal.pdf"> Research Proposal</a>
+          </li>
+        </ul>
+      </div>
+      <div class="cd-top">
+        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+      </div>
+    </div>
+    <footer id="page_footer">
+      <div class="footer_wrap">
+        <div class="copyright">
+          &copy;2022 - 2023 by Yuetai Li
+        </div>
+        <div class="theme-info">
+          Powered by 
+          <a target="_blank" href="https://hexo.io" rel="nofollow noopener">Hexo</a> &amp; 
+          <a target="_blank" href="https://github.com/PhosphorW/hexo-theme-academia" rel="nofollow noopener">Academia Theme</a>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-pjax@latest/jquery.pjax.min.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html> -->
