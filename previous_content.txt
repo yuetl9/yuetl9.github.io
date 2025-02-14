@@ -1,5 +1,7 @@
 
-<!-- <!DOCTYPE html>
+
+<!-- 
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,23 +10,37 @@
     <title>Homepage</title>
     <meta name="author" content="Yuetai Li" />
     <link rel="shortcut icon" href="/image/favicon.png" />
+
     <!-- 外部样式表 -->
     <link rel="stylesheet" href="/css/index.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css" />
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"
+    />
+
+    <!-- Google Fonts: Roboto 和 Merriweather -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Merriweather:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Hexo 等相关配置 -->
     <meta name="generator" content="Hexo 6.3.0" />
     <link rel="alternate" href="/atom.xml" title="Homepage" type="application/atom+xml" />
 
     <!-- 内嵌样式，用于美化页面 -->
     <style>
-      /* 通用设置 */
+      /* =============================
+         全局基础设置
+      ============================= */
       body {
         font-family: 'Roboto', sans-serif;
-        background: #f5f7fa;
+        background: #fdfdfd;
         color: #333;
         margin: 0;
         padding: 0;
+        font-size: 18px;
+        line-height: 1.8;
       }
       a {
         color: #007bff;
@@ -35,8 +51,24 @@
         color: #0056b3;
         text-decoration: underline;
       }
-
-      /* 头部样式 */
+      /* 对强调文字使用斜体 */
+      em {
+        font-style: italic;
+        color: #555;
+      }
+      
+      /* =============================
+         标题字体设置
+      ============================= */
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Merriweather', serif;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+      }
+      
+      /* =============================
+         头部样式
+      ============================= */
       header#page_header {
         background-color: #ffffff;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -49,13 +81,13 @@
       .header_wrap {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 1rem;
+        padding: 1rem 1.5rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
       }
       #blog_name a.blog_title {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         font-weight: 700;
         color: #333;
       }
@@ -74,16 +106,18 @@
         color: #007bff;
       }
 
-      /* 主体内容 */
+      /* =============================
+         主体内容
+      ============================= */
       main#page_main {
-        padding-top: 80px; /* 预留头部高度 */
+        padding-top: 90px; /* 为固定头部预留足够空间 */
         max-width: 1200px;
         margin: 0 auto;
         padding: 2rem 1rem;
       }
       .side-card {
         background: #ffffff;
-        padding: 1rem;
+        padding: 1.5rem;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         margin-bottom: 2rem;
         border-radius: 8px;
@@ -96,14 +130,17 @@
       }
       .author-discrip h3 {
         margin: 0.5rem 0 0.25rem;
-        font-size: 1.25rem;
+        font-size: 1.4rem;
       }
       .author-discrip p.author-bio {
         margin: 0;
         color: #777;
+        font-style: italic;
       }
 
-      /* 文章内容 */
+      /* =============================
+         文章内容
+      ============================= */
       article {
         background: #ffffff;
         padding: 2rem;
@@ -112,24 +149,26 @@
         margin-bottom: 2rem;
       }
       article h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
         border-bottom: 2px solid #eee;
         padding-bottom: 0.5rem;
         margin-bottom: 1rem;
       }
       article p {
-        line-height: 1.6;
-        margin-bottom: 1rem;
+        margin: 1.5rem 0;
       }
-      ol {
-        padding-left: 1.5rem;
+      ul, ol {
+        margin: 1rem 0;
+        padding-left: 1.6rem;
       }
-      ol li {
-        margin-bottom: 0.75rem;
-        line-height: 1.6;
+      li {
+        margin: 0.8rem 0;
+        line-height: 1.8;
       }
 
-      /* 导航 & 回到顶部 */
+      /* =============================
+         导航 & 回到顶部
+      ============================= */
       .nav-wrap {
         position: fixed;
         right: 1rem;
@@ -147,12 +186,15 @@
         justify-content: center;
         cursor: pointer;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        transition: background 0.3s;
       }
       .cd-top:hover {
         background: #0056b3;
       }
 
-      /* 页脚 */
+      /* =============================
+         页脚
+      ============================= */
       footer#page_footer {
         background-color: #ffffff;
         padding: 1rem 0;
@@ -174,6 +216,7 @@
       }
     </style>
   </head>
+
   <body>
     <header id="page_header">
       <div class="header_wrap">
@@ -187,17 +230,23 @@
           <li class="menus_item">
             <a class="site-page" href="/files/cv.pdf">CV</a>
           </li>
-          <li class="menus_item">
+          <!-- <li class="menus_item">
             <a class="site-page" href="/files/Research_Proposal.pdf">Research Proposal</a>
-          </li>
+          </li> -->
         </ul>
       </div>
     </header>
+
     <main id="page_main">
       <div class="side-card sticky">
         <div class="card-wrap" itemscope itemtype="http://schema.org/Person">
           <div class="author-avatar">
-            <img class="avatar-img" src="/image/profile.jpg" onerror="this.onerror=null;this.src='/img/profile.png'" alt="avatar" />
+            <img
+              class="avatar-img"
+              src="/image/profile.jpg"
+              onerror="this.onerror=null;this.src='/img/profile.png'"
+              alt="avatar"
+            />
           </div>
           <div class="author-discrip">
             <h3>Yuetai Li</h3>
@@ -208,30 +257,51 @@
           </div>
         </div>
       </div>
+
       <div class="page" itemscope itemtype="http://schema.org/CreativeWork">
         <article>
           <h1 id="Bio">
             <a href="#Bio" class="headerlink" title="Bio"></a>About Me
           </h1>
           <p>
-            I am a second-year PhD student at 
-            <a href="https://labs.ece.uw.edu/nsl/faculty/radha/" target="_blank" title="Network Security Lab">
-              Network Security Lab
-            </a> at University of Washington, advised by 
-            <a href="https://people.ece.uw.edu/radha/" target="_blank" title="Prof. Radha Poovendran's Webpage">
-              Prof. Radha Poovendran
-            </a>. I also work closely with 
-            <a href="https://xiangyue9607.github.io/" target="_blank" title="Yue Xiang's Webpage">
-              Dr. Yue Xiang
-            </a> from CMU LTI and 
-            <a href="https://zhangchenxu.com/">Zhangchen Xu</a> from UW. Prior to UW, I obtained my Bachelor degree in Communication Engineering at University of Glasgow (UofG) and University of Electronic Science and Technology of China (UESTC). During my undergrad, I was advised by Prof. Lei Zhang from the University of Glasgow. My CV (updated 02.13, 2025) shows more details.
+            I am a second-year PhD student at
+            <a
+              href="https://labs.ece.uw.edu/nsl/faculty/radha/"
+              target="_blank"
+              title="Network Security Lab"
+              >Network Security Lab</a
+            >
+            at University of Washington, advised by
+            <a
+              href="https://people.ece.uw.edu/radha/"
+              target="_blank"
+              title="Prof. Radha Poovendran's Webpage"
+              >Prof. Radha Poovendran</a
+            >. I also work closely with
+            <a
+              href="https://xiangyue9607.github.io/"
+              target="_blank"
+              title="Yue Xiang's Webpage"
+              >Dr. Yue Xiang</a
+            >
+            from CMU LTI and
+            <a href="https://zhangchenxu.com/">Zhangchen Xu</a> from UW. Prior
+            to UW, I obtained my Bachelor degree in Communication Engineering at
+            University of Glasgow (UofG). During my undergrad, I was advised
+            by Prof. Lei Zhang from the University of Glasgow. My <a href="/files/cv.pdf"></a>CV</a> (updated
+            02.13, 2025) shows more details.
           </p>
+          <div style="margin-left: 40px;">
+            <em>I am open to collaboration! Feel free to reach out if you would like to discuss Reasoning, Synthetic Data, and Post-training of LLMs and SLMs!</em>
+          </div>
+
           <h1 id="Research-Interests">
-            <a href="#Research-Interests" class="headerlink" title="Research Interests"></a>Research Interests
+            <a href="#Research-Interests" class="headerlink" title="Research Interests"></a>
+            Research Interests
           </h1>
-          <!-- 简要介绍 -->
           <p>
-            My primary interests lie broadly in <strong>LLM Reasoning and Synthetic Dataset</strong>, <strong>Trustworthy AI</strong>, and <strong>Distributed Algorithms</strong>.
+            My primary interests lie broadly in <strong>LLM Reasoning and Synthetic Dataset</strong>,
+            <strong>Trustworthy AI</strong>, and <strong>Distributed Algorithms</strong>.
           </p>
 
           <p>My current research directions include:</p>
@@ -240,22 +310,13 @@
           <p><strong>(1) Reasoning and Synthetic Dataset</strong></p>
           <ul>
             <li>
-              Small Model Learnability Gap: 
-              Small models do not consistently benefit from long CoT or distillation from large teachers. 
-              Instead, they perform better on shorter, simpler reasoning chains that better align with their intrinsic learning capacity. 
-              We propose <em>Mix Distillation</em>, a simple yet effective strategy that combines both long and short CoT examples 
-              or reasoning from both large and small teachers.
+              <strong>Small Model Learnability Gap</strong>: Small models do not consistently benefit from long CoT or distillation from large teachers. Instead, they perform better on shorter, simpler reasoning chains that better align with their intrinsic learning capacity. We propose <em>Mix Distillation</em>, a simple yet effective strategy that combines both long and short CoT examples or reasoning from both large and small teachers.
             </li>
             <li>
-              MagpieLM: 
-              We maintained the official Magpie Hugging Face repository and released open-sourced synthetic data 
-              generated from open-source LMs. Our aligned MagpieLM models are still 
-              <strong>SOTA</strong> small language models for chat.
+              <strong>MagpieLM</strong>: We maintained the official Magpie Hugging Face repository and released open-sourced synthetic data generated from open-source LMs. Our aligned MagpieLM models are still <strong>SOTA</strong> small language models for chat.
             </li>
             <li>
-              SafeChain: 
-              Investigated how long CoT impacts safety and revealed that long CoT does not necessarily enhance safety. 
-              We introduced SafeChain, a dataset designed to improve safety alignment while preserving reasoning capabilities.
+              <strong>SafeChain</strong>: Investigated how long CoT impacts safety and revealed that long CoT does not necessarily enhance safety. We introduced SafeChain, a dataset designed to improve safety alignment while preserving reasoning capabilities.
             </li>
           </ul>
 
@@ -263,15 +324,10 @@
           <p><strong>(2) Trustworthy AI</strong></p>
           <ul>
             <li>
-              CLEANGEN: 
-              A novel decoding algorithm that defends against various generative backdoor attacks, 
-              including advertisement injection, code injection, and malicious content generation. 
-              We proposed theoretical proofs to optimize the decoding overhead and efficiency.
+              <strong>CLEANGEN</strong>: A novel decoding algorithm that defends against various generative backdoor attacks, including advertisement injection, code injection, and malicious content generation. We proposed theoretical proofs to optimize the decoding overhead and efficiency.
             </li>
             <li>
-              Spectral Aggregation: 
-              A novel defense mechanism to aggregate the spectral features of multilayers to detect poisoned samples, 
-              restoring the effectiveness of the latent separability assumption in adaptive backdoor attacks.
+              <strong>Spectral Aggregation</strong>: A novel defense mechanism to aggregate the spectral features of multilayers to detect poisoned samples, restoring the effectiveness of the latent separability assumption in adaptive backdoor attacks.
             </li>
           </ul>
 
@@ -279,17 +335,19 @@
           <p><strong>(3) Distributed Algorithms</strong></p>
           <ul>
             <li>
-              Distributed Consensus: 
-              Work includes Voting Validity, Wireless Distributed Consensus, Resource Allocation, and Distributed Consensus Network.
+              <strong>Distributed Consensus</strong>: Work includes Voting Validity, Wireless Distributed Consensus, Resource Allocation, and Distributed Consensus Network.
             </li>
           </ul>
+
           <h1 id="Selected Publications">
-            <a href="#Selected Publications" class="headerlink" title="Selected Publications"></a>Selected Publications
+            <a href="#Selected Publications" class="headerlink" title="Selected Publications"></a>
+            Selected Publications
           </h1>
           <p>(Updated 02.13, 2025)</p>
           <ol>
             <li>
-              <strong>Yuetai Li</strong>, Xiang Yue, Zhangchen Xu, Fengqing Jiang, Luyao Niu, Bhaskar Ramasubramanian, Bill Yuchen Lin, Radha Poovendran, “Small Models Struggle to Learn from Strong Reasoners”, submitted to ACL 2024
+              <strong>Yuetai Li</strong>, Xiang Yue, Zhangchen Xu, Fengqing Jiang, Luyao Niu, Bhaskar Ramasubramanian, Bill Yuchen Lin, Radha Poovendran, “Small Models Struggle to Learn from Strong
+              Reasoners”, submitted to ACL 2024
             </li>
             <li>
               Fengqing Jiang, Zhangchen Xu, <strong>Yuetai Li</strong>, Luyao Niu, Bill Yuchen Lin, Radha Poovendran, “SafeChain: Revisiting Safety of Language Model with Long Chain-of-Thought Reasoning Capability”, submitted to ACL 2024
@@ -301,7 +359,7 @@
               <strong>Yuetai Li</strong>, Zhangchen Xu, Fengqing Jiang, Luyao Niu, Dinuka Sahabandu, Bhaskar Ramasubramanian, Radha Poovendran, “CLEANGEN: Mitigating Backdoor Attacks for Generation Tasks in Large Language Models” Accepted by EMNLP 2024, June 2024
             </li>
             <li>
-              <strong>Yuetai Li</strong>, Dinuka Sahabandu, Bhaskar Ramasubramanian, Radha Poovendran, "SpecAggre: Spectral Aggregation-based Latent Separability Recovery for Defense against Machine Learning Backdoor Attacks" 
+              <strong>Yuetai Li</strong>, Dinuka Sahabandu, Bhaskar Ramasubramanian, Radha Poovendran, "SpecAggre: Spectral Aggregation-based Latent Separability Recovery for Defense against Machine Learning Backdoor Attacks"
             </li>
             <li>
               <strong>Yuetai Li</strong>, Zhangchen Xu, Lei Zhang, Jon Crowcroft, “A Modularized Framework of Communication in Consensus”, submitted to IEEE/ACM Transactions on Networking
@@ -325,6 +383,7 @@
         </article>
       </div>
     </main>
+
     <div class="nav-wrap">
       <div class="nav">
         <button class="site-nav">
@@ -343,20 +402,28 @@
         <i class="fa fa-arrow-up" aria-hidden="true"></i>
       </div>
     </div>
+
     <footer id="page_footer">
       <div class="footer_wrap">
         <div class="copyright">
           &copy;2022 - 2023 by Yuetai Li
         </div>
         <div class="theme-info">
-          Powered by 
-          <a target="_blank" href="https://hexo.io" rel="nofollow noopener">Hexo</a> &amp; 
+          Powered by
+          <a target="_blank" href="https://hexo.io" rel="nofollow noopener">Hexo</a>
+          &amp;
           <a target="_blank" href="https://github.com/PhosphorW/hexo-theme-academia" rel="nofollow noopener">Academia Theme</a>
         </div>
       </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery-pjax@latest/jquery.pjax.min.js"></script>
+
+    <!-- 脚本 -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery-pjax@latest/jquery.pjax.min.js"
+    ></script>
     <script src="/js/main.js"></script>
   </body>
-</html> --> -->
+</html>-->
