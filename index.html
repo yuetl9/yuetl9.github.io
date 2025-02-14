@@ -390,66 +390,61 @@
           <h1 id="Research-Interests">
             <a href="#Research-Interests" class="headerlink" title="Research Interests"></a>Research Interests
           </h1>
+          <!-- 简要介绍 -->
           <p>
             My primary interests lie broadly in <strong>LLM reasoning</strong>, 
             <strong>synthetic dataset</strong>, and <strong>Trustworthy AI</strong>.
           </p>
-          
-          <p>
-            My current research directions include:
-          </p>
 
-          <h3>(1) Reasoning and Synthetic Dataset</h3>
-          
-          <p>
-            <strong>Small Model Learnability Gap</strong>: 
-            Small models do not consistently benefit from long CoT or distillation from large teachers. 
-            Instead, they perform better on shorter, simpler reasoning chains that better align with their intrinsic learning capacity. 
-            We propose <em>Mix Distillation</em>, a simple yet effective strategy that combines 
-            both long and short CoT examples or reasoning from both large and small teachers.
-          </p>
-          
-          <p>
-            <strong>Large Model Paradox</strong>: 
-            Larger models do not necessarily generate better synthetic datasets. 
-            We find that the quality of synthetic datasets is closely related to the response generator.
-          </p>
-          
-          <p>
-            <strong>MagpieLM</strong>: 
-            We maintained the official Magpie Hugging Face repository and released open-sourced synthetic data 
-            generated from open-source LMs. Our aligned MagpieLM models are still 
-            <strong>SOTA</strong> small language models for chat.
-          </p>
-          
-          <p>
-            <strong>SafeChain</strong>: 
-            Investigated how long CoT impacts safety and revealed that long CoT does not necessarily enhance safety. 
-            We introduced SafeChain, a dataset designed to improve safety alignment while preserving reasoning capabilities.
-          </p>
-          
-          <h3>(2) Trustworthy AI</h3>
-          
-          <p>
-            <strong>CLEANGEN</strong>: 
-            A novel decoding algorithm that defends against various generative backdoor attacks, 
-            including advertisement injection, code injection, and malicious content generation. 
-            We proposed theoretical proofs to optimize the decoding overhead and efficiency.
-          </p>
-          
-          <p>
-            <strong>Spectral Aggregation</strong>: 
-            A novel defense mechanism to aggregate the spectral features of multilayers to detect poisoned samples, 
-            restoring the effectiveness of the latent separability assumption in adaptive backdoor attacks.
-          </p>
-          
-          <h3>(3) Distributed Algorithms</h3>
-          
-          <p>
-            <strong>Distributed Consensus</strong>: 
-            Work includes Voting Validity, Wireless Distributed Consensus, and Distributed Consensus Network.
-          </p>
-          
+          <p>My current research directions include:</p>
+
+          <!-- (1) Reasoning and Synthetic Dataset -->
+          <p><strong>(1) Reasoning and Synthetic Dataset</strong></p>
+          <ul>
+            <li>
+              Small Model Learnability Gap: 
+              Small models do not consistently benefit from long CoT or distillation from large teachers. 
+              Instead, they perform better on shorter, simpler reasoning chains that better align with their intrinsic learning capacity. 
+              We propose <em>Mix Distillation</em>, a simple yet effective strategy that combines both long and short CoT examples 
+              or reasoning from both large and small teachers.
+            </li>
+            <li>
+              MagpieLM: 
+              We maintained the official Magpie Hugging Face repository and released open-sourced synthetic data 
+              generated from open-source LMs. Our aligned MagpieLM models are still 
+              <strong>SOTA</strong> small language models for chat.
+            </li>
+            <li>
+              SafeChain: 
+              Investigated how long CoT impacts safety and revealed that long CoT does not necessarily enhance safety. 
+              We introduced SafeChain, a dataset designed to improve safety alignment while preserving reasoning capabilities.
+            </li>
+          </ul>
+
+          <!-- (2) Trustworthy AI -->
+          <p><strong>(2) Trustworthy AI</strong></p>
+          <ul>
+            <li>
+              CLEANGEN: 
+              A novel decoding algorithm that defends against various generative backdoor attacks, 
+              including advertisement injection, code injection, and malicious content generation. 
+              We proposed theoretical proofs to optimize the decoding overhead and efficiency.
+            </li>
+            <li>
+              Spectral Aggregation: 
+              A novel defense mechanism to aggregate the spectral features of multilayers to detect poisoned samples, 
+              restoring the effectiveness of the latent separability assumption in adaptive backdoor attacks.
+            </li>
+          </ul>
+
+          <!-- (3) Distributed Algorithms -->
+          <p><strong>(3) Distributed Algorithms</strong></p>
+          <ul>
+            <li>
+              Distributed Consensus: 
+              Work includes Voting Validity, Wireless Distributed Consensus, Resource Allocation, and Distributed Consensus Network.
+            </li>
+          </ul>
           <h1 id="Selected Publications">
             <a href="#Selected Publications" class="headerlink" title="Selected Publications"></a>Selected Publications
           </h1>
