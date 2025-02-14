@@ -28,6 +28,11 @@
 
     <!-- 内嵌样式，用于美化页面 -->
     <style>
+      /* 在 html 上设置 scroll-padding-top，确保跳转到锚点时预留空间 */
+      html {
+        scroll-padding-top: 90px;
+      }
+
       /* =============================
          全局基础设置
       ============================= */
@@ -40,15 +45,16 @@
         font-size: 18px;
         line-height: 1.8;
       }
+      /* 使用 !important 覆盖可能的外部样式 */
       a {
-        font-family: inherit; /* 使用相同字体 */
-        color: #4da6ff; /* 浅蓝色 */
-        text-decoration: none;
-        transition: color 0.3s;
+        font-family: inherit !important;
+        color: #4da6ff !important; /* 浅蓝色 */
+        text-decoration: none !important;
+        transition: color 0.3s !important;
       }
       a:hover {
-        color: #1e90ff; /* 悬停时稍深 */
-        text-decoration: underline;
+        color: #1e90ff !important; /* 悬停时稍深 */
+        text-decoration: underline !important;
       }
       /* 对强调文字使用斜体 */
       em {
@@ -247,12 +253,7 @@
       <div class="side-card sticky">
         <div class="card-wrap" itemscope itemtype="http://schema.org/Person">
           <div class="author-avatar">
-            <img
-              class="avatar-img"
-              src="/image/profile.jpg"
-              onerror="this.onerror=null;this.src='/img/profile.png'"
-              alt="avatar"
-            />
+            <img class="avatar-img" src="/image/profile.jpg" onerror="this.onerror=null;this.src='/img/profile.png'" alt="avatar" />
           </div>
           <div class="author-discrip">
             <h3>Yuetai Li</h3>
@@ -271,31 +272,17 @@
           </h1>
           <p>
             I am a second-year PhD student at
-            <a
-              href="https://labs.ece.uw.edu/nsl/faculty/radha/"
-              target="_blank"
-              title="Network Security Lab"
-              >Network Security Lab</a
-            >
+            <a href="https://labs.ece.uw.edu/nsl/faculty/radha/" target="_blank" title="Network Security Lab">Network Security Lab</a>
             at University of Washington, advised by
-            <a
-              href="https://people.ece.uw.edu/radha/"
-              target="_blank"
-              title="Prof. Radha Poovendran's Webpage"
-              >Prof. Radha Poovendran</a
-            >. I also work closely with
-            <a
-              href="https://xiangyue9607.github.io/"
-              target="_blank"
-              title="Yue Xiang's Webpage"
-              >Dr. Yue Xiang</a
-            >
+            <a href="https://people.ece.uw.edu/radha/" target="_blank" title="Prof. Radha Poovendran's Webpage">Prof. Radha Poovendran</a>.
+            I also work closely with
+            <a href="https://xiangyue9607.github.io/" target="_blank" title="Yue Xiang's Webpage">Dr. Yue Xiang</a>
             from CMU LTI and
-            <a href="https://zhangchenxu.com/">Zhangchen Xu</a> from UW. Prior
-            to UW, I obtained my Bachelor degree in Communication Engineering at
-            University of Glasgow (UofG). During my undergrad, I was advised
-            by Prof. Lei Zhang from the University of Glasgow. My <a href="/files/cv.pdf">CV</a> (updated
-            02.13, 2025) shows more details.
+            <a href="https://zhangchenxu.com/">Zhangchen Xu</a> from UW.
+          </p>
+          <p>
+            Prior to UW, I obtained my Bachelor degree in Communication Engineering at University of Glasgow (UofG) and University of Electronic Science and Technology of China (UESTC). During my undergrad, I was advised by
+            <a href="https://www.gla.ac.uk/schools/engineering/staff/leizhang/">Prof. Lei Zhang</a> from UofG. My <a href="/files/cv.pdf">CV</a> (updated 02.13, 2025) shows more details.
           </p>
           <div style="margin-left: 40px;">
             <em>I am open to collaboration! Feel free to reach out if you would like to discuss Reasoning, Synthetic Data, and Post-training of LLMs and SLMs!</em>
@@ -306,23 +293,21 @@
             Research Interests
           </h1>
           <p>
-            My primary interests lie broadly in <strong>LLM Reasoning and Synthetic Dataset</strong>,
-            <strong>Trustworthy AI</strong>, and <strong>Distributed Algorithms</strong>.
+            My primary interests lie broadly in <strong>LLM Reasoning</strong>, <strong>Synthetic Dataset</strong>,
+            and <strong>Trustworthy AI</strong>. My current research directions include:
           </p>
-
-          <p>My current research directions include:</p>
 
           <!-- (1) Reasoning and Synthetic Dataset -->
           <p><strong>(1) Reasoning and Synthetic Dataset</strong></p>
           <ul>
             <li>
-              <strong>Small Model Learnability Gap</strong>: Small models do not consistently benefit from long CoT or distillation from large teachers. Instead, they perform better on shorter, simpler reasoning chains that better align with their intrinsic learning capacity. We propose <em>Mix Distillation</em>, a simple yet effective strategy that combines both long and short CoT examples or reasoning from both large and small teachers.
+              <strong><a href="https://yuetl9.github.io/">Small Model Learnability Gap</a></strong> (coming soon): We revealed that small models do not consistently benefit from long CoT or distillation from large teachers. Instead, they perform better on shorter, simpler reasoning chains that better align with their intrinsic learning capacity. We propose <em>Mix Distillation</em>, a simple yet effective strategy that combines both long and short CoT examples or reasoning from both large and small teachers.
             </li>
             <li>
-              <strong><a href="https://huggingface.co/collections/Magpie-Align/magpielm-66e2221f31fa3bf05b10786a">Magpie</a></strong>: We maintained the official Magpie Hugging Face repository and released open-sourced synthetic data generated from open-source LLMs. Our aligned MagpieLM models are still <strong>SOTA</strong> small language models for chat.
+              <strong><a href="https://huggingface.co/collections/Magpie-Align/magpielm-66e2221f31fa3bf05b10786a">MagpieLM</a></strong>: We maintained the official Magpie Hugging Face repository and released open-sourced synthetic data generated from open-source LLMs. Our aligned MagpieLM models are still <strong>SOTA</strong> small language models for chat.
             </li>
             <li>
-              <strong>SafeChain</strong>: Investigated how long CoT impacts safety and revealed that long CoT does not necessarily enhance safety. We introduced SafeChain, a dataset designed to improve safety alignment while preserving reasoning capabilities.
+              <strong><a href="https://yuetl9.github.io/">SafeChain</a></strong> (coming soon): We investigated how long CoT impacts safety and revealed that long CoT does not necessarily enhance safety. We introduced SafeChain, a dataset designed to improve safety alignment while preserving reasoning capabilities.
             </li>
           </ul>
 
@@ -330,10 +315,10 @@
           <p><strong>(2) Trustworthy AI</strong></p>
           <ul>
             <li>
-              <strong>CLEANGEN</strong>: A novel decoding algorithm that defends against various generative backdoor attacks, including advertisement injection, code injection, and malicious content generation. We proposed theoretical proofs to optimize the decoding overhead and efficiency.
+              <strong><a href="https://arxiv.org/abs/2406.12257">CleanGen</a></strong>: A novel decoding algorithm that defends against various generative backdoor attacks, including advertisement injection, code injection, and malicious content generation.
             </li>
             <li>
-              <strong>Spectral Aggregation</strong>: A novel defense mechanism to aggregate the spectral features of multilayers to detect poisoned samples, restoring the effectiveness of the latent separability assumption in adaptive backdoor attacks.
+              <strong><a href="https://yuetl9.github.io/">Spectral Aggregation</a></strong>: A novel defense mechanism to aggregate the spectral features of multilayers to detect poisoned samples, restoring the effectiveness of the latent separability assumption in adaptive backdoor attacks.
             </li>
           </ul>
 
@@ -341,13 +326,13 @@
           <p><strong>(3) Distributed Algorithms</strong></p>
           <ul>
             <li>
-              <strong>Distributed Consensus</strong>: Work includes Voting Validity, Wireless Distributed Consensus, Resource Allocation, and Distributed Consensus Network.
+              <strong>Distributed Consensus</strong>: Work includes <a href="https://ieeexplore.ieee.org/document/10177399">Voting Validity</a>, <a href="https://ieeexplore.ieee.org/document/10071537">Wireless Distributed Consensus</a>, <a href="https://ieeexplore.ieee.org/document/10194560">Resource Allocation</a>, and <a href="https://yuetl9.github.io/">Distributed Consensus Network</a>.
             </li>
           </ul>
 
-          <h1 id="Selected Publications">
-            <a href="#Selected Publications" class="headerlink" title="Selected Publications"></a>
-            Selected Publications
+          <h1 id="Publications">
+            <a href="#Publications" class="headerlink" title="Publications"></a>
+            Publications
           </h1>
           <p>(Updated 02.13, 2025)</p>
           <ol>
@@ -359,9 +344,6 @@
               Fengqing Jiang, Zhangchen Xu, <strong>Yuetai Li</strong>, Luyao Niu, Bill Yuchen Lin, Radha Poovendran, “SafeChain: Revisiting Safety of Language Model with Long Chain-of-Thought Reasoning Capability”, submitted to ACL 2024
             </li>
             <li>
-              Zhangchen Xu, <strong>Yuetai Li</strong>, Chenglin Feng, Lei Zhang, “Voting Validity: Exact Fault-tolerant Consensus”, Accepted by the 37th IEEE International Parallel &amp; Distributed Processing Symposium (IPDPS), December 2022
-            </li>
-            <li>
               <strong>Yuetai Li</strong>, Zhangchen Xu, Fengqing Jiang, Luyao Niu, Dinuka Sahabandu, Bhaskar Ramasubramanian, Radha Poovendran, “CLEANGEN: Mitigating Backdoor Attacks for Generation Tasks in Large Language Models” Accepted by EMNLP 2024, June 2024
             </li>
             <li>
@@ -371,13 +353,13 @@
               <strong>Yuetai Li</strong>, Zhangchen Xu, Lei Zhang, Jon Crowcroft, “A Modularized Framework of Communication in Consensus”, submitted to IEEE/ACM Transactions on Networking
             </li>
             <li>
-              <strong>Yuetai Li</strong>, Yixuan Fan, Lei Zhang, Jon Crowcroft, “RAFT Consensus Reliability in Wireless Networks: Probabilistic Analysis”, submitted to IEEE Internet of Things Journal, May 2022, under review
+              Zhangchen Xu, <strong>Yuetai Li</strong>, Chenglin Feng, Lei Zhang, “Voting Validity: Exact Fault-tolerant Consensus”, Accepted by the 37th IEEE International Parallel & Distributed Processing Symposium (IPDPS), December 2022
             </li>
             <li>
-              <strong>Yuetai Li</strong>, Zhangchen Xu, Lei Zhang, “A Modularized Framework of Communication in Consensus and Consensus Network Reliability Analysis”, in progress
+              Dachao Yu, Yao Sun, <strong>Yuetai Li</strong>, Lei Zhang and Muhammad Ali Imran, "Communication Resource Allocation of Raft in Wireless Network," Published in IEEE Sensors Journal, September 2023
             </li>
             <li>
-              Dachao Yu, Yao Sun, <strong>Yuetai Li</strong>, Lei Zhang, “Communication Resource Allocation of Raft in Wireless Network”, submitted to Elsevier Digital Communications and Networks, November 2022, under review
+              <strong>Yuetai Li</strong>, Yixuan Fan, Lei Zhang, Jon Crowcroft, “RAFT Consensus Reliability in Wireless Networks: Probabilistic Analysis”, Published in IEEE Internet of Things Journal, February 2023
             </li>
             <li>
               <strong>Yuetai Li</strong>, Tong Tong, Benhao Pan, Huajun Yang, Ping Jiang, Weinan Caiyang, “Three-mirror system design for shaping the elliptical beam of a laser diode”, Published in Elsevier Optik, Volume 264, 2022
@@ -424,33 +406,11 @@
     </footer>
 
     <!-- 脚本 -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/jquery-pjax@latest/jquery.pjax.min.js"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-pjax@latest/jquery.pjax.min.js"></script>
     <script src="/js/main.js"></script>
   </body>
 </html>
-
-<!-- <!DOCTYPE html><html lang="English"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"><title>Homepage</title><meta name="author" content="Yuetai Li"><link rel="shortcut icon" href="/image/favicon.png"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Homepage" type="application/atom+xml">
-</head><body><header id="page_header"><div class="header_wrap"><div id="blog_name"><a class="blog_title" id="site-name" href="/">Homepage</a></div><button class="menus_icon"><div class="navicon"></div></button><ul class="menus_items"><li class="menus_item"><a class="site-page" href="/files/cv.pdf"> CV</a></li><li class="menus_item"><a class="site-page" href="/files/Research_Proposal.pdf"> Research Proposal</a></li></ul></div></header><main id="page_main"><div class="side-card sticky"><div class="card-wrap" itemscope itemtype="http://schema.org/Person"><div class="author-avatar"><img class="avatar-img" src="/image/profile.jpg" onerror="this.onerror=null;this.src='/img/profile.png'" alt="avatar"></div><div class="author-discrip"><h3>Yuetai Li</h3><p class="author-bio">yuetaili@uw.edu yuetail9@163.com</p></div><div class="author-links"><button class="btn m-social-links">Links</button></div></div></div><div class="page" itemscope itemtype="http://schema.org/CreativeWork"><article><h1 id="About-Me"><a href="#About-Me" class="headerlink" title="Bio"></a>About Me</h1><p>
-    I am a second-year PhD student at 
-    <a href="https://labs.ece.uw.edu/nsl/faculty/radha/" target="_blank" title="Network Security Lab">Network Security Lab</a> at University of Washington, advised by <a href="https://people.ece.uw.edu/radha/" target="_blank" title="Prof. Radha Poovendran's Webpage">Prof. Radha Poovendran</a>. I also work closely with 
-    <a href="https://xiangyue9607.github.io/" target="_blank" title="Yue Xiang's Webpage">Dr. Yue Xiang</a> from CMU LTI and <a href="https://zhangchenxu.com/">Zhangchen Xu</a> from UW. Prior to UW, I obtained my Bachelor degree in Communication Engineering at University of Glasgow (UofG) and University of Electronic Science and Technology of China (UESTC). During my undergrad, I was advised by Prof. Lei Zhang from the University of Glasgow. My 
-    CV (updated 12.25, 2022) shows more details.</p>
-<h1 id="Research-Interests"><a href="#Research-Interests" class="headerlink" title="Research Interests"></a>Research Interests</h1><p>It is worth noting that there are three different consensus theories known in control, distributed computer systems, and human social psychology. It seems that consensus shows its significance in the philosophy of distributed scenarios. I summarize that they emphasize group intelligence to be dynamic, reliable, and cognitive, respectively. My previous work aimed to explore consensus of computers in distributed intelligent systems for reliability. For my future research, exploring the fundamental philosophy behind three consensus theories, and finding new application scenarios or theory foundations of consensus is an intriguing topic. My <a href="https://yuetl9.github.io/files/Research_Proposal.pdf">Research Proposal</a> shows more detals.</p>
-<h1 id="Publications"><a href="#Publications" class="headerlink" title="Publications"></a>Publications</h1><p>(Updated 12. 23, 2022)</p>
-<ol>
-<li>Zhangchen Xu, <strong>Yuetai Li</strong>, Chenglin Feng, Lei Zhang, “Voting Validity: Exact Fault-tolerant Consensus”, Accepted by the 37th IEEE International Parallel &amp; Distributed Processing Symposium (IPDPS), December 2022</li>
-<li><strong>Yuetai Li</strong>, Yixuan Fan, Lei Zhang, Jon Crowcroft, “RAFT Consensus Reliability in Wireless Networks: Probabilistic Analysis”, submitted to IEEE Internet of Things Journal, May 2022, under review</li>
-<li><strong>Yuetai Li</strong>, Zhangchen Xu, Lei Zhang, “A Modularized Framework of Communication in Consensus and Consensus Network Reliability Analysis”, in progress</li>
-<li>Dachao Yu, Yao Sun, <strong>Yuetai Li</strong>, Lei Zhang, “Communication Resource Allocation of Raft in Wireless Network”, submitted to Elsevier Digital Communications and Networks, November 2022, under review</li>
-<li><strong>Yuetai Li</strong>, Tong Tong, Benhao Pan, Huajun Yang, Ping Jiang, Weinan Caiyang, “Three-mirror system design for shaping the elliptical beam of a laser diode”, Published in Elsevier Optik, Volume 264, 2022</li>
-<li><strong>Yuetai Li</strong>, Xinbin Chen, Jiale Wang, Tao Zhan, Huajun Yang, Weinan Caiyang, Ping Jiang, “Shaping and transmitting elliptical beam from laser diode by off-axis quadric reflective mirrors”, Published in Elsevier Optics Communications, Volume 493, 2021</li>
-</ol>
-</article></div></main><div class="nav-wrap"><div class="nav"><button class="site-nav"><div class="navicon"></div></button><ul class="nav_items"><li class="nav_item"><a class="nav-page" href="/files/cv.pdf"> CV</a></li><li class="nav_item"><a class="nav-page" href="/files/Research_Proposal.pdf"> Research Proposal</a></li></ul></div><div class="cd-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></div></div><footer id="page_footer"><div class="footer_wrap"><div class="copyright">&copy;2022 - 2023 by Yuetai Li</div><div class="theme-info">Powered by <a target="_blank" href="https://hexo.io" rel="nofollow noopener">Hexo</a> & <a target="_blank" href="https://github.com/PhosphorW/hexo-theme-academia" rel="nofollow noopener">Academia Theme</a></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery-pjax@latest/jquery.pjax.min.js"></script><script src="/js/main.js"></script></body></html> -->
 
 
 <!-- 
