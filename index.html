@@ -371,8 +371,8 @@
       </div>
       <div class="page" itemscope itemtype="http://schema.org/CreativeWork">
         <article>
-          <h1 id="About-Me">
-            <a href="#About-Me" class="headerlink" title="Bio"></a>About Me
+          <h1 id="Bio">
+            <a href="#Bio" class="headerlink" title="Bio"></a>About Me
           </h1>
           <p>
             I am a second-year PhD student at 
@@ -385,22 +385,57 @@
             <a href="https://xiangyue9607.github.io/" target="_blank" title="Yue Xiang's Webpage">
               Dr. Yue Xiang
             </a> from CMU LTI and 
-            <a href="https://zhangchenxu.com/">Zhangchen Xu</a> from UW. Prior to UW, I obtained my Bachelor degree in Communication Engineering at University of Glasgow (UofG) and University of Electronic Science and Technology of China (UESTC). During my undergrad, I was advised by Prof. Lei Zhang from the University of Glasgow. My CV (updated 12.25, 2022) shows more details.
+            <a href="https://zhangchenxu.com/">Zhangchen Xu</a> from UW. Prior to UW, I obtained my Bachelor degree in Communication Engineering at University of Glasgow (UofG) and University of Electronic Science and Technology of China (UESTC). During my undergrad, I was advised by Prof. Lei Zhang from the University of Glasgow. My CV (updated 02.13, 2025) shows more details.
           </p>
           <h1 id="Research-Interests">
             <a href="#Research-Interests" class="headerlink" title="Research Interests"></a>Research Interests
           </h1>
-          <p>
-            It is worth noting that there are three different consensus theories known in control, distributed computer systems, and human social psychology. It seems that consensus shows its significance in the philosophy of distributed scenarios. I summarize that they emphasize group intelligence to be dynamic, reliable, and cognitive, respectively. My previous work aimed to explore consensus of computers in distributed intelligent systems for reliability. For my future research, exploring the fundamental philosophy behind three consensus theories, and finding new application scenarios or theory foundations of consensus is an intriguing topic. My 
-            <a href="https://yuetl9.github.io/files/Research_Proposal.pdf">Research Proposal</a> shows more details.
+          <p> 
+
+            My primary interests lie broadly in LLM reasoning, synthetic dataset and Trustworthy AI.  My current research directions include:
+
+            (1) Reasoning and Synthetic Dataset:
+            Small Model Learnability Gap: small models do not consistently benefit from long CoT or distillation from large teachers. Instead they perform better on shorter, simpler reasoning chains that better align with their intrinsic learning capacity. We propose Mix Distillation, a simple yet effective strategy that by combining long and short CoT examples or reasoning from both large and small teachers. 
+            Large Model Paradox: larger models do not necessarily generate better synthetic datasets. We find that the quality of synthetic datasets is closely related to the response generator.
+
+            MagpieLM: We maintained the official Magpie Hugging Face repository and released open-sourced synthetic data generated from open-source LMs. Our aligned MagpieLM models are still SOTA small language models for chat.
+
+            SafeChain: Investigated how long CoT impacts safety and revealed that long CoT does not necessarily enhance safety. We introduced SafeChain, a dataset designed to improve the safety alignment while preserving reasoning capabilities.
+
+            (2) Trustworthy AI:
+            CLEANGEN: a novel decoding algorithm that defenses against various generative backdoor attacks, including advertisement injection, code injection, and malicious content generation. We proposed theoretical proofs to optimize the decoding overhead and efficiency.
+
+            Spectral Aggregation: a novel defense mechanism to aggregate the spectral features of multilayers to detect poisoned samples, restoring the effectiveness of latent separability assumption in adaptive backdoor attacks.
+
+            (3)Distributed Algorithms
+
+            
+            Distributed Consensus. Work includes Voting Validity, Wireless Distributed Consensus, and Distributed Consensus Network.
+
+
           </p>
-          <h1 id="Publications">
-            <a href="#Publications" class="headerlink" title="Publications"></a>Publications
+          <h1 id="Selected Publications">
+            <a href="#Selected Publications" class="headerlink" title="Selected Publications"></a>Selected Publications
           </h1>
-          <p>(Updated 12. 23, 2022)</p>
+          <p>(Updated 02.13, 2025)</p>
           <ol>
             <li>
+              <strong>Yuetai Li</strong>, Xiang Yue, Zhangchen Xu, Fengqing Jiang, Luyao Niu, Bhaskar Ramasubramanian, Bill Yuchen Lin, Radha Poovendran, “Small Models Struggle to Learn from Strong Reasoners”, submitted to ACL 2024
+            </li>
+            <li>
+              Fengqing Jiang, Zhangchen Xu, <strong>Yuetai Li</strong>, Luyao Niu, Bill Yuchen Lin, Radha Poovendran, “SafeChain: Revisiting Safety of Language Model with Long Chain-of-Thought Reasoning Capability”, submitted to ACL 2024
+            </li>
+            <li>
               Zhangchen Xu, <strong>Yuetai Li</strong>, Chenglin Feng, Lei Zhang, “Voting Validity: Exact Fault-tolerant Consensus”, Accepted by the 37th IEEE International Parallel &amp; Distributed Processing Symposium (IPDPS), December 2022
+            </li>
+            <li>
+              <strong>Yuetai Li</strong>, Zhangchen Xu, Fengqing Jiang, Luyao Niu, Dinuka Sahabandu, Bhaskar Ramasubramanian, Radha Poovendran, “CLEANGEN: Mitigating Backdoor Attacks for Generation Tasks in Large Language Models” Accepted by EMNLP 2024, June 2024
+            </li>
+            <li>
+              <strong>Yuetai Li</strong>, Dinuka Sahabandu, Bhaskar Ramasubramanian, Radha Poovendran, "SpecAggre: Spectral Aggregation-based Latent Separability Recovery for Defense against Machine Learning Backdoor Attacks" 
+            </li>
+            <li>
+              <strong>Yuetai Li</strong>, Zhangchen Xu, Lei Zhang, Jon Crowcroft, “A Modularized Framework of Communication in Consensus”, submitted to IEEE/ACM Transactions on Networking
             </li>
             <li>
               <strong>Yuetai Li</strong>, Yixuan Fan, Lei Zhang, Jon Crowcroft, “RAFT Consensus Reliability in Wireless Networks: Probabilistic Analysis”, submitted to IEEE Internet of Things Journal, May 2022, under review
