@@ -1,556 +1,227 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-    <title>Yuetai Li - PhD Student at University of Washington</title>
+    <title>Homepage</title>
     <meta name="author" content="Yuetai Li" />
-    <meta name="description" content="Personal homepage of Yuetai Li, PhD student at Network Security Lab, University of Washington. Research interests include LLM Reasoning, Synthetic Dataset, and Trustworthy AI." />
     <link rel="shortcut icon" href="/image/favicon.png" />
 
-    <!-- External Stylesheets -->
+    <!-- 外部样式表 -->
     <link rel="stylesheet" href="/css/index.css" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"
     />
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts: Roboto 和 Merriweather -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Merriweather:wght@400;700&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Hexo Configuration -->
+    <!-- Hexo 等相关配置 -->
     <meta name="generator" content="Hexo 6.3.0" />
     <link rel="alternate" href="/atom.xml" title="Homepage" type="application/atom+xml" />
 
-    <!-- Enhanced Styles -->
+    <!-- 内嵌样式，用于美化页面 -->
     <style>
-      :root {
-        --primary-color: #2563eb;
-        --primary-hover: #1d4ed8;
-        --secondary-color: #64748b;
-        --text-primary: #1e293b;
-        --text-secondary: #475569;
-        --bg-primary: #ffffff;
-        --bg-secondary: #f8fafc;
-        --border-color: #e2e8f0;
-        --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
-        --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        --max-width: 1200px;
-        --header-height: 72px;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
       body {
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        background: var(--bg-secondary);
-        color: var(--text-primary);
+        font-family: 'Roboto', sans-serif;
+        background: #fdfdfd;
+        color: #333;
         margin: 0;
         padding: 0;
-        font-size: 16px;
-        line-height: 1.7;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
+        font-size: 18px;
+        line-height: 1.8;
       }
-
-      ::selection {
-        background: var(--primary-color);
-        color: white;
-      }
-
       a {
-        color: var(--primary-color);
-        text-decoration: none;
-        transition: all 0.2s ease;
-        position: relative;
+        font-family: inherit !important;
+        color: #4da6ff !important; /* 浅蓝色 */
+        text-decoration: none !important;
+        transition: color 0.3s !important;
       }
-
       a:hover {
-        color: var(--primary-hover);
+        color: #1e90ff !important; /* 悬停时稍深 */
+        text-decoration: underline !important;
       }
-
-      /* Inline link hover effect */
-      article a:not(.headerlink):hover::after {
-        content: '';
-        position: absolute;
-        bottom: -2px;
-        left: 0;
-        right: 0;
-        height: 2px;
-        background: var(--primary-color);
-        transform: scaleX(1);
-        transform-origin: left;
-        transition: transform 0.3s ease;
-      }
-
-      article a:not(.headerlink)::after {
-        content: '';
-        position: absolute;
-        bottom: -2px;
-        left: 0;
-        right: 0;
-        height: 2px;
-        background: var(--primary-color);
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: transform 0.3s ease;
-      }
-
       em {
         font-style: italic;
-        color: var(--text-secondary);
+        color: #555;
       }
       
       h1, h2, h3, h4, h5, h6 {
-        font-family: 'Crimson Text', Georgia, serif;
-        margin-top: 2.5rem;
+        font-family: 'Merriweather', serif;
+        margin-top: 1.5rem;
         margin-bottom: 1rem;
-        color: var(--text-primary);
-        font-weight: 600;
-        letter-spacing: -0.02em;
       }
-
-      /* Header Styles */
+      
+      /* =============================
+         头部样式
+      ============================= */
       header#page_header {
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        background-color: #ffffff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         z-index: 1000;
-        transition: all 0.3s ease;
       }
-
       .header_wrap {
-        max-width: var(--max-width);
+        max-width: 1200px;
         margin: 0 auto;
-        padding: 0 2rem;
-        height: var(--header-height);
+        padding: 1rem; /* 统一左右内边距 */
         display: flex;
         align-items: center;
         justify-content: space-between;
       }
-
       #blog_name a.blog_title {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         font-weight: 700;
-        color: var(--text-primary);
-        letter-spacing: -0.02em;
-        transition: opacity 0.2s ease;
+        color: #333;
       }
-
-      #blog_name a.blog_title:hover {
-        opacity: 0.8;
-      }
-
       .menus_items {
         list-style: none;
         display: flex;
-        gap: 2rem;
+        gap: 1rem;
         margin: 0;
         padding: 0;
-        align-items: center;
       }
-
       .menus_item a.site-page {
         font-weight: 500;
-        color: var(--text-secondary);
-        font-size: 0.95rem;
-        padding: 0.5rem 1rem;
-        border-radius: 8px;
-        transition: all 0.2s ease;
+        color: #555;
       }
-
       .menus_item a.site-page:hover {
-        color: var(--primary-color);
-        background: rgba(37, 99, 235, 0.08);
+        color: #007bff;
       }
-
+      /* 去除菜单按钮默认的边距和内边距 */
       .menus_icon {
-        display: none;
         background: none;
         border: none;
-        cursor: pointer;
-        padding: 0.5rem;
+        margin: 0;
+        padding: 0;
       }
 
-      /* Main Content */
+      /* =============================
+         主体内容
+      ============================= */
       main#page_main {
-        padding-top: calc(var(--header-height) + 3rem);
-        max-width: var(--max-width);
+        padding-top: 90px; /* 为固定头部预留足够空间 */
+        max-width: 1200px;
         margin: 0 auto;
-        padding-left: 2rem;
-        padding-right: 2rem;
-        padding-bottom: 4rem;
-        display: grid;
-        grid-template-columns: 320px 1fr;
-        gap: 3rem;
-        align-items: start;
+        padding: 2rem 1rem;
       }
-
-      /* Profile Card */
       .side-card {
-        background: var(--bg-primary);
-        padding: 2rem;
-        box-shadow: var(--shadow-md);
-        border-radius: 16px;
-        border: 1px solid var(--border-color);
-        position: sticky;
-        top: calc(var(--header-height) + 2rem);
-        text-align: center;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background: #ffffff;
+        padding: 1.5rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+        border-radius: 8px;
       }
-
-      .side-card:hover {
-        transform: translateY(-2px);
-        box-shadow: var(--shadow-lg);
-      }
-
-      .author-avatar {
-        margin-bottom: 1.5rem;
-      }
-
       .author-avatar img {
         border-radius: 50%;
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
         object-fit: cover;
-        border: 4px solid var(--bg-secondary);
-        box-shadow: var(--shadow-md);
-        transition: transform 0.3s ease;
       }
-
-      .author-avatar img:hover {
-        transform: scale(1.05);
-      }
-
       .author-discrip h3 {
-        margin: 0 0 0.5rem;
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: var(--text-primary);
+        margin: 0.5rem 0 0.25rem;
+        font-size: 1.4rem;
       }
-
       .author-discrip p.author-bio {
-        margin: 0 0 1.5rem;
-        color: var(--text-secondary);
-        font-size: 0.9rem;
-        line-height: 1.6;
+        margin: 0;
+        color: #777;
+        font-style: italic;
       }
 
-      .author-links {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
+      /* =============================
+         文章内容
+      ============================= */
+      article {
+        background: #ffffff;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+      }
+      article h1 {
+        font-size: 2.2rem;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+      }
+      article p {
+        margin: 1.5rem 0;
+      }
+      ul, ol {
+        margin: 1rem 0;
+        padding-left: 1.6rem;
+      }
+      li {
+        margin: 0.8rem 0;
+        line-height: 1.8;
       }
 
-      .contact-info {
-        display: flex;
-        flex-direction: column;
-        gap: 0.75rem;
-        margin-top: 1.5rem;
-        padding-top: 1.5rem;
-        border-top: 1px solid var(--border-color);
+      /* =============================
+         导航 & 回到顶部
+      ============================= */
+      .nav-wrap {
+        position: fixed;
+        right: 1rem;
+        bottom: 1rem;
+        z-index: 1000;
       }
-
-      .contact-item {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        font-size: 0.9rem;
-        color: var(--text-secondary);
-      }
-
-      .contact-item i {
-        width: 20px;
-        color: var(--primary-color);
-      }
-
-      .social-links {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-        margin-top: 1rem;
-      }
-
-      .social-link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+      .cd-top {
+        background: #007bff;
+        color: #fff;
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        background: var(--bg-secondary);
-        color: var(--text-secondary);
-        transition: all 0.3s ease;
-      }
-
-      .social-link:hover {
-        background: var(--primary-color);
-        color: white;
-        transform: translateY(-2px);
-      }
-
-      /* Article Content */
-      article {
-        background: var(--bg-primary);
-        padding: 3rem;
-        border-radius: 16px;
-        box-shadow: var(--shadow-md);
-        border: 1px solid var(--border-color);
-      }
-
-      article h1 {
-        font-size: 2.5rem;
-        margin-top: 0;
-        margin-bottom: 2rem;
-        padding-bottom: 1rem;
-        border-bottom: 2px solid var(--border-color);
-        position: relative;
-      }
-
-      article h1:not(:first-child) {
-        margin-top: 4rem;
-      }
-
-      article h1::after {
-        content: '';
-        position: absolute;
-        bottom: -2px;
-        left: 0;
-        width: 60px;
-        height: 2px;
-        background: var(--primary-color);
-      }
-
-      article p {
-        margin: 1.5rem 0;
-        color: var(--text-secondary);
-        font-size: 1.05rem;
-        line-height: 1.8;
-      }
-
-      article p strong {
-        color: var(--text-primary);
-        font-weight: 600;
-      }
-
-      ul, ol {
-        margin: 1.5rem 0;
-        padding-left: 1.5rem;
-      }
-
-      li {
-        margin: 1rem 0;
-        line-height: 1.8;
-        color: var(--text-secondary);
-      }
-
-      li strong {
-        color: var(--text-primary);
-      }
-
-      /* Research sections styling */
-      article > p > strong:first-child {
-        display: inline-block;
-        font-size: 1.2rem;
-        margin-top: 2rem;
-        margin-bottom: 1rem;
-        color: var(--text-primary);
-      }
-
-      /* Publication list */
-      ol {
-        counter-reset: publication;
-        list-style: none;
-        padding-left: 0;
-      }
-
-      ol li {
-        counter-increment: publication;
-        position: relative;
-        padding-left: 3rem;
-        margin: 1.5rem 0;
-        padding-bottom: 1.5rem;
-        border-bottom: 1px solid var(--border-color);
-      }
-
-      ol li:last-child {
-        border-bottom: none;
-      }
-
-      ol li::before {
-        content: counter(publication);
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 2rem;
-        height: 2rem;
-        background: var(--primary-color);
-        color: white;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 600;
-        font-size: 0.9rem;
-      }
-
-      /* Navigation & Back to Top */
-      .nav-wrap {
-        position: fixed;
-        right: 2rem;
-        bottom: 2rem;
-        z-index: 1000;
-      }
-
-      .cd-top {
-        background: var(--primary-color);
-        color: white;
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        box-shadow: var(--shadow-lg);
-        transition: all 0.3s ease;
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(10px);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        transition: background 0.3s;
       }
-
-      .cd-top.is-visible {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-      }
-
       .cd-top:hover {
-        background: var(--primary-hover);
-        transform: translateY(-2px);
+        background: #0056b3;
       }
 
-      /* Footer */
+      /* =============================
+         页脚
+      ============================= */
       footer#page_footer {
-        background: var(--bg-primary);
-        padding: 3rem 0;
+        background-color: #ffffff;
+        padding: 1rem 0;
         text-align: center;
-        border-top: 1px solid var(--border-color);
-        margin-top: 4rem;
+        border-top: 1px solid #eee;
+        margin-top: 2rem;
       }
-
       .footer_wrap {
-        max-width: var(--max-width);
+        max-width: 1200px;
         margin: 0 auto;
         font-size: 0.875rem;
-        color: var(--text-secondary);
+        color: #777;
       }
-
-      .theme-info {
-        margin-top: 0.5rem;
+      .theme-info a {
+        color: #007bff;
       }
-
-      /* Anchor offset for fixed header */
+      .theme-info a:hover {
+        text-decoration: underline;
+      }
+      
       [id]:target::before {
         content: "";
         display: block;
-        height: calc(var(--header-height) + 20px);
-        margin-top: calc(-1 * (var(--header-height) + 20px));
-      }
-
-      /* Call-to-action styling */
-      em[style*="color: #A52A2A"] {
-        display: inline-block;
-        background: rgba(239, 68, 68, 0.1);
-        padding: 1rem 1.5rem;
-        border-radius: 8px;
-        border-left: 4px solid #ef4444;
-        margin: 1.5rem 0;
-        width: 100%;
-      }
-
-      /* Mobile Responsive */
-      @media (max-width: 968px) {
-        main#page_main {
-          grid-template-columns: 1fr;
-          gap: 2rem;
-        }
-
-        .side-card {
-          position: relative;
-          top: 0;
-        }
-
-        .menus_icon {
-          display: block;
-        }
-
-        .menus_items {
-          display: none;
-        }
-
-        article {
-          padding: 2rem;
-        }
-
-        article h1 {
-          font-size: 2rem;
-        }
-      }
-
-      @media (max-width: 640px) {
-        .header_wrap {
-          padding: 0 1rem;
-        }
-
-        main#page_main {
-          padding-left: 1rem;
-          padding-right: 1rem;
-        }
-
-        article {
-          padding: 1.5rem;
-        }
-
-        ol li {
-          padding-left: 2.5rem;
-        }
-      }
-
-      /* Smooth scrolling */
-      html {
-        scroll-behavior: smooth;
-      }
-
-      /* Loading animation */
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      article {
-        animation: fadeIn 0.6s ease-out;
-      }
-
-      .side-card {
-        animation: fadeIn 0.6s ease-out 0.2s both;
+        height: 90px; /* 等于 header 高度 */
+        margin-top: -90px;
       }
     </style>
   </head>
@@ -559,22 +230,18 @@
     <header id="page_header">
       <div class="header_wrap">
         <div id="blog_name">
-          <a class="blog_title" id="site-name" href="/">Yuetai Li</a>
+          <a class="blog_title" id="site-name" href="/">Homepage</a>
         </div>
         <button class="menus_icon">
-          <i class="fas fa-bars"></i>
+          <div class="navicon"></div>
         </button>
         <ul class="menus_items">
           <li class="menus_item">
-            <a class="site-page" href="/files/cv.pdf">
-              <i class="fas fa-file-pdf" style="margin-right: 0.5rem;"></i>CV
-            </a>
+            <a class="site-page" href="/files/cv.pdf">CV</a>
           </li>
-          <li class="menus_item">
-            <a class="site-page" href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank">
-              <i class="fas fa-graduation-cap" style="margin-right: 0.5rem;"></i>Google Scholar
-            </a>
-          </li>
+          <!-- <li class="menus_item">
+            <a class="site-page" href="/files/Research_Proposal.pdf">Research Proposal</a>
+          </li> -->
         </ul>
       </div>
     </header>
@@ -587,39 +254,15 @@
               class="avatar-img"
               src="/image/profile.jpg"
               onerror="this.onerror=null;this.src='/img/profile.png'"
-              alt="Yuetai Li"
+              alt="avatar"
             />
           </div>
           <div class="author-discrip">
             <h3>Yuetai Li</h3>
-            <p class="author-bio">PhD Student<br>University of Washington</p>
+            <p class="author-bio">yuetaili@uw.edu yuetail9@163.com</p>
           </div>
-          
-          <div class="contact-info">
-            <div class="contact-item">
-              <i class="fas fa-envelope"></i>
-              <span>yuetaili@uw.edu</span>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-envelope"></i>
-              <span>yuetail9@163.com</span>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <span>Seattle, WA</span>
-            </div>
-          </div>
-
-          <div class="social-links">
-            <a href="https://github.com/yourusername" class="social-link" target="_blank">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="https://twitter.com/yourusername" class="social-link" target="_blank">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/yourusername" class="social-link" target="_blank">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
+          <div class="author-links">
+            <button class="btn m-social-links">Links</button>
           </div>
         </div>
       </div>
@@ -630,7 +273,7 @@
             <a href="#Bio" class="headerlink" title="Bio"></a>About Me
           </h1>
           <p>
-            I am a second-year PhD student at the
+            I am a second-year PhD student at
             <a
               href="https://labs.ece.uw.edu/nsl/faculty/radha/"
               target="_blank"
@@ -709,25 +352,25 @@
           <p>(Updated 02.13, 2025)</p>
           <ol>
             <li>
-              <strong>Yuetai Li</strong>, Xiang Yue, Zhangchen Xu, Fengqing Jiang, Luyao Niu, Bhaskar Ramasubramanian, Bill Yuchen Lin, Radha Poovendran, "Small Models Struggle to Learn from Strong Reasoners"
+              <strong>Yuetai Li</strong>, Xiang Yue, Zhangchen Xu, Fengqing Jiang, Luyao Niu, Bhaskar Ramasubramanian, Bill Yuchen Lin, Radha Poovendran, “Small Models Struggle to Learn from Strong Reasoners”
             </li>
             <li>
-              Fengqing Jiang, Zhangchen Xu, <strong>Yuetai Li</strong>, Luyao Niu, Zhen Xiang, Bo Li, Bill Yuchen Lin, Radha Poovendran, "SafeChain: Revisiting Safety of Language Model with Long Chain-of-Thought Reasoning Capability"
+              Fengqing Jiang, Zhangchen Xu, <strong>Yuetai Li</strong>, Luyao Niu, Zhen Xiang, Bo Li, Bill Yuchen Lin, Radha Poovendran, “SafeChain: Revisiting Safety of Language Model with Long Chain-of-Thought Reasoning Capability”
             </li>
             <li>
-              <strong>Yuetai Li</strong>, Zhangchen Xu, Fengqing Jiang, Luyao Niu, Dinuka Sahabandu, Bhaskar Ramasubramanian, Radha Poovendran, "CLEANGEN: Mitigating Backdoor Attacks for Generation Tasks in Large Language Models" Accepted by EMNLP 2024, June 2024
+              <strong>Yuetai Li</strong>, Zhangchen Xu, Fengqing Jiang, Luyao Niu, Dinuka Sahabandu, Bhaskar Ramasubramanian, Radha Poovendran, “CLEANGEN: Mitigating Backdoor Attacks for Generation Tasks in Large Language Models” Accepted by EMNLP 2024, June 2024
             </li>
             <li>
               <strong>Yuetai Li</strong>, Dinuka Sahabandu, Bhaskar Ramasubramanian, Radha Poovendran, "SpecAggre: Spectral Aggregation-based Latent Separability Recovery for Defense against Machine Learning Backdoor Attacks" 
             </li>
             <li>
-              <strong>Yuetai Li</strong>, Zhangchen Xu, Lei Zhang, Jon Crowcroft, "A Modularized Framework of Communication in Consensus", submitted to IEEE/ACM Transactions on Networking
+              <strong>Yuetai Li</strong>, Zhangchen Xu, Lei Zhang, Jon Crowcroft, “A Modularized Framework of Communication in Consensus”, submitted to IEEE/ACM Transactions on Networking
             </li>
             <li>
-              Zhangchen Xu, <strong>Yuetai Li</strong>, Chenglin Feng, Lei Zhang, "Voting Validity: Exact Fault-tolerant Consensus", Accepted by the 37th IEEE International Parallel & Distributed Processing Symposium (IPDPS), December 2022 
+              Zhangchen Xu, <strong>Yuetai Li</strong>, Chenglin Feng, Lei Zhang, “Voting Validity: Exact Fault-tolerant Consensus”, Accepted by the 37th IEEE International Parallel & Distributed Processing Symposium (IPDPS), December 2022 
             </li>
             <li>
-              <strong>Yuetai Li</strong>, Yixuan Fan, Lei Zhang, Jon Crowcroft, "RAFT Consensus Reliability in Wireless Networks: Probabilistic Analysis", Published in IEEE Internet of Things Journal, February 2023
+              <strong>Yuetai Li</strong>, Yixuan Fan, Lei Zhang, Jon Crowcroft, “RAFT Consensus Reliability in Wireless Networks: Probabilistic Analysis”, Published in IEEE Internet of Things Journal, February 2023
             </li>
           </ol>
         </article>
@@ -735,15 +378,28 @@
     </main>
 
     <div class="nav-wrap">
-      <div class="cd-top" id="backToTop">
-        <i class="fas fa-chevron-up"></i>
+      <div class="nav">
+        <button class="site-nav">
+          <div class="navicon"></div>
+        </button>
+        <ul class="nav_items">
+          <li class="nav_item">
+            <a class="nav-page" href="/files/cv.pdf">CV</a>
+          </li>
+          <li class="nav_item">
+            <a class="nav-page" href="/files/Research_Proposal.pdf">Research Proposal</a>
+          </li>
+        </ul>
+      </div>
+      <div class="cd-top">
+        <i class="fa fa-arrow-up" aria-hidden="true"></i>
       </div>
     </div>
 
     <footer id="page_footer">
       <div class="footer_wrap">
         <div class="copyright">
-          &copy;2022 - 2025 by Yuetai Li
+          &copy;2022 - 2023 by Yuetai Li
         </div>
         <div class="theme-info">
           Powered by
@@ -754,41 +410,15 @@
       </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- 脚本 -->
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"
     ></script>
-    <script>
-      // Back to top button
-      $(window).scroll(function() {
-        if ($(this).scrollTop() > 300) {
-          $('#backToTop').addClass('is-visible');
-        } else {
-          $('#backToTop').removeClass('is-visible');
-        }
-      });
-
-      $('#backToTop').click(function(e) {
-        e.preventDefault();
-        $('html, body').animate({scrollTop: 0}, 500);
-      });
-
-      // Mobile menu toggle
-      $('.menus_icon').click(function() {
-        $('.menus_items').slideToggle();
-      });
-
-      // Header scroll effect
-      let lastScrollTop = 0;
-      $(window).scroll(function() {
-        let scrollTop = $(this).scrollTop();
-        if (scrollTop > lastScrollTop && scrollTop > 100) {
-          $('#page_header').css('transform', 'translateY(-100%)');
-        } else {
-          $('#page_header').css('transform', 'translateY(0)');
-        }
-        lastScrollTop = scrollTop;
-      });
-    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery-pjax@latest/jquery.pjax.min.js"
+    ></script>
+    <script src="/js/main.js"></script>
   </body>
 </html>
+
+

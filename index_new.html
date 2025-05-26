@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <title>Yuetai Li - PhD Student at University of Washington</title>
+    <meta name="author" content="Yuetai Li" />
+    <meta name="description" content="Personal homepage of Yuetai Li, PhD student at Network Security Lab, University of Washington. Research interests include LLM Reasoning, Synthetic Dataset, and Trustworthy AI." />
+    <link rel="shortcut icon" href="/image/favicon.png" />
+
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="/css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Hexo Configuration -->
+    <meta name="generator" content="Hexo 6.3.0" />
+    <link rel="alternate" href="/atom.xml" title="Homepage" type="application/atom+xml" />
+
+    <!-- Enhanced Styles -->
+    <style>
+      :root {
+        --primary-color: #2563eb;
+        --primary-hover: #1d4ed8;
+        --secondary-color: #64748b;
+        --text-primary: #1e293b;
+        --text-secondary: #475569;
+        --bg-primary: #ffffff;
+        --bg-secondary: #f8fafc;
+        --border-color: #e2e8f0;
+        --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+        --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        --max-width: 1200px;
+        --header-height: 72px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background: var(--bg-secondary);
+        color: var(--text-primary);
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      ::selection {
+        background: var(--primary-color);
+        color: white;
+      }
+
+      a {
+        color: var(--primary-color);
+        text-decoration: none;
+        transition: all 0.2s ease;
+        position: relative;
+      }
+
+      a:hover {
+        color: var(--primary-hover);
+      }
+
+      /* Inline link hover effect */
+      article a:not(.headerlink):hover::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: var(--primary-color);
+        transform: scaleX(1);
+        transform-origin: left;
+        transition: transform 0.3s ease;
+      }
+
+      article a:not(.headerlink)::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: var(--primary-color);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease;
+      }
+
+      em {
+        font-style: italic;
+        color: var(--text-secondary);
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Crimson Text', Georgia, serif;
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        color: var(--text-primary);
+        font-weight: 600;
+        letter-spacing: -0.02em;
+      }
+
+      /* Header Styles */
+      header#page_header {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        transition: all 0.3s ease;
+      }
+
+      .header_wrap {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 0 2rem;
+        height: var(--header-height);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      #blog_name a.blog_title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        letter-spacing: -0.02em;
+        transition: opacity 0.2s ease;
+      }
+
+      #blog_name a.blog_title:hover {
+        opacity: 0.8;
+      }
+
+      .menus_items {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+      }
+
+      .menus_item a.site-page {
+        font-weight: 500;
+        color: var(--text-secondary);
+        font-size: 0.95rem;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        transition: all 0.2s ease;
+      }
+
+      .menus_item a.site-page:hover {
+        color: var(--primary-color);
+        background: rgba(37, 99, 235, 0.08);
+      }
+
+      .menus_icon {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.5rem;
+      }
+
+      /* Main Content */
+      main#page_main {
+        padding-top: calc(var(--header-height) + 3rem);
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-bottom: 4rem;
+        display: grid;
+        grid-template-columns: 320px 1fr;
+        gap: 3rem;
+        align-items: start;
+      }
+
+      /* Profile Card */
+      .side-card {
+        background: var(--bg-primary);
+        padding: 2rem;
+        box-shadow: var(--shadow-md);
+        border-radius: 16px;
+        border: 1px solid var(--border-color);
+        position: sticky;
+        top: calc(var(--header-height) + 2rem);
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .side-card:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .author-avatar {
+        margin-bottom: 1.5rem;
+      }
+
+      .author-avatar img {
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border: 4px solid var(--bg-secondary);
+        box-shadow: var(--shadow-md);
+        transition: transform 0.3s ease;
+      }
+
+      .author-avatar img:hover {
+        transform: scale(1.05);
+      }
+
+      .author-discrip h3 {
+        margin: 0 0 0.5rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--text-primary);
+      }
+
+      .author-discrip p.author-bio {
+        margin: 0 0 1.5rem;
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+        line-height: 1.6;
+      }
+
+      .author-links {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--border-color);
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+      }
+
+      .contact-item i {
+        width: 20px;
+        color: var(--primary-color);
+      }
+
+      .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+
+      .social-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: var(--bg-secondary);
+        color: var(--text-secondary);
+        transition: all 0.3s ease;
+      }
+
+      .social-link:hover {
+        background: var(--primary-color);
+        color: white;
+        transform: translateY(-2px);
+      }
+
+      /* Article Content */
+      article {
+        background: var(--bg-primary);
+        padding: 3rem;
+        border-radius: 16px;
+        box-shadow: var(--shadow-md);
+        border: 1px solid var(--border-color);
+      }
+
+      article h1 {
+        font-size: 2.5rem;
+        margin-top: 0;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid var(--border-color);
+        position: relative;
+      }
+
+      article h1:not(:first-child) {
+        margin-top: 4rem;
+      }
+
+      article h1::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 60px;
+        height: 2px;
+        background: var(--primary-color);
+      }
+
+      article p {
+        margin: 1.5rem 0;
+        color: var(--text-secondary);
+        font-size: 1.05rem;
+        line-height: 1.8;
+      }
+
+      article p strong {
+        color: var(--text-primary);
+        font-weight: 600;
+      }
+
+      ul, ol {
+        margin: 1.5rem 0;
+        padding-left: 1.5rem;
+      }
+
+      li {
+        margin: 1rem 0;
+        line-height: 1.8;
+        color: var(--text-secondary);
+      }
+
+      li strong {
+        color: var(--text-primary);
+      }
+
+      /* Research sections styling */
+      article > p > strong:first-child {
+        display: inline-block;
+        font-size: 1.2rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        color: var(--text-primary);
+      }
+
+      /* Publication list */
+      ol {
+        counter-reset: publication;
+        list-style: none;
+        padding-left: 0;
+      }
+
+      ol li {
+        counter-increment: publication;
+        position: relative;
+        padding-left: 3rem;
+        margin: 1.5rem 0;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      ol li:last-child {
+        border-bottom: none;
+      }
+
+      ol li::before {
+        content: counter(publication);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 2rem;
+        height: 2rem;
+        background: var(--primary-color);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+
+      /* Navigation & Back to Top */
+      .nav-wrap {
+        position: fixed;
+        right: 2rem;
+        bottom: 2rem;
+        z-index: 1000;
+      }
+
+      .cd-top {
+        background: var(--primary-color);
+        color: white;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: var(--shadow-lg);
+        transition: all 0.3s ease;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+      }
+
+      .cd-top.is-visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      .cd-top:hover {
+        background: var(--primary-hover);
+        transform: translateY(-2px);
+      }
+
+      /* Footer */
+      footer#page_footer {
+        background: var(--bg-primary);
+        padding: 3rem 0;
+        text-align: center;
+        border-top: 1px solid var(--border-color);
+        margin-top: 4rem;
+      }
+
+      .footer_wrap {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        font-size: 0.875rem;
+        color: var(--text-secondary);
+      }
+
+      .theme-info {
+        margin-top: 0.5rem;
+      }
+
+      /* Anchor offset for fixed header */
+      [id]:target::before {
+        content: "";
+        display: block;
+        height: calc(var(--header-height) + 20px);
+        margin-top: calc(-1 * (var(--header-height) + 20px));
+      }
+
+      /* Call-to-action styling */
+      em[style*="color: #A52A2A"] {
+        display: inline-block;
+        background: rgba(239, 68, 68, 0.1);
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
+        border-left: 4px solid #ef4444;
+        margin: 1.5rem 0;
+        width: 100%;
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 968px) {
+        main#page_main {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+
+        .side-card {
+          position: relative;
+          top: 0;
+        }
+
+        .menus_icon {
+          display: block;
+        }
+
+        .menus_items {
+          display: none;
+        }
+
+        article {
+          padding: 2rem;
+        }
+
+        article h1 {
+          font-size: 2rem;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .header_wrap {
+          padding: 0 1rem;
+        }
+
+        main#page_main {
+          padding-left: 1rem;
+          padding-right: 1rem;
+        }
+
+        article {
+          padding: 1.5rem;
+        }
+
+        ol li {
+          padding-left: 2.5rem;
+        }
+      }
+
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Loading animation */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      article {
+        animation: fadeIn 0.6s ease-out;
+      }
+
+      .side-card {
+        animation: fadeIn 0.6s ease-out 0.2s both;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header id="page_header">
+      <div class="header_wrap">
+        <div id="blog_name">
+          <a class="blog_title" id="site-name" href="/">Yuetai Li</a>
+        </div>
+        <button class="menus_icon">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="menus_items">
+          <li class="menus_item">
+            <a class="site-page" href="/files/cv.pdf">
+              <i class="fas fa-file-pdf" style="margin-right: 0.5rem;"></i>CV
+            </a>
+          </li>
+          <li class="menus_item">
+            <a class="site-page" href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank">
+              <i class="fas fa-graduation-cap" style="margin-right: 0.5rem;"></i>Google Scholar
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main id="page_main">
+      <div class="side-card sticky">
+        <div class="card-wrap" itemscope itemtype="http://schema.org/Person">
+          <div class="author-avatar">
+            <img
+              class="avatar-img"
+              src="/image/profile.jpg"
+              onerror="this.onerror=null;this.src='/img/profile.png'"
+              alt="Yuetai Li"
+            />
+          </div>
+          <div class="author-discrip">
+            <h3>Yuetai Li</h3>
+            <p class="author-bio">PhD Student<br>University of Washington</p>
+          </div>
+          
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>yuetaili@uw.edu</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>yuetail9@163.com</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Seattle, WA</span>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="https://github.com/yourusername" class="social-link" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://twitter.com/yourusername" class="social-link" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/yourusername" class="social-link" target="_blank">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="page" itemscope itemtype="http://schema.org/CreativeWork">
+        <article>
+          <h1 id="Bio">
+            <a href="#Bio" class="headerlink" title="Bio"></a>About Me
+          </h1>
+          <p>
+            I am a second-year PhD student at the
+            <a
+              href="https://labs.ece.uw.edu/nsl/faculty/radha/"
+              target="_blank"
+              title="Network Security Lab"
+              >Network Security Lab</a
+            >
+            at University of Washington, advised by
+            <a
+              href="https://people.ece.uw.edu/radha/"
+              target="_blank"
+              title="Prof. Radha Poovendran's Webpage"
+              >Prof. Radha Poovendran</a
+            >. I am fortunate to work closely with
+            <a
+              href="https://xiangyue9607.github.io/"
+              target="_blank"
+              title="Yue Xiang's Webpage"
+              >Dr. Xiang Yue</a
+            >
+            at CMU LTI,
+            <a href="https://zhangchenxu.com/">Zhangchen Xu</a>, <a href="https://luyaoniu.github.io/">Prof. Luyao Niu</a>, and <a href="https://yuchenlin.xyz/">Prof. Bill Yuchen Lin</a> at UW.
+          </p>
+          <p>
+            Prior to UW, I obtained my Bachelor degree in Communication Engineering at
+            University of Glasgow (UofG). During my undergrad, I was advised
+            by <a href="https://www.gla.ac.uk/schools/engineering/staff/leizhang/">Prof. Lei Zhang</a> at UofG. I am also fortunate to work with <a href="https://www.cl.cam.ac.uk/~jac22/">Prof. Jon Crowcroft</a> at University of Cambridge. 
+          </p>
+          <p>My <a href="/files/cv.pdf">CV</a> (updated 02.13, 2025) shows more details.</p>
+          <p><em style="color: #A52A2A;">I am open to collaboration and discuss interesting ideas! Email yuetaili@uw.edu if you would like to share any opportunities, collaborations, or just chat!</em></p>
+
+          <h1 id="Research-Interests">
+            <a href="#Research-Interests" class="headerlink" title="Research Interests"></a>
+            Research Interests
+          </h1>
+          <p>
+            My primary interests lie broadly in <strong>LLM Reasoning</strong>, <strong>Synthetic Dataset</strong>,
+            and <strong>Trustworthy AI</strong>. I am particularly interested in: (1) understanding the reasoning capabilities of LLMs through rigorous analysis (2) investigating synthetic datasets optimized for effective model learning. My current research directions include:</p>
+
+          <!-- (1) Reasoning and Synthetic Dataset -->
+          <p><strong>(1) Reasoning and Synthetic Dataset</strong></p>
+          <ul>
+            <li>
+              <strong><a href="https://arxiv.org/pdf/2502.12143">Small Model Learnability Gap</a></strong>: We revealed that small models do not consistently benefit from long CoT or distillation from large teachers. Instead, they perform better on shorter, simpler reasoning chains that better align with their intrinsic learning capacity. We propose <em>Mix Distillation</em>, a simple yet effective strategy that combines both long and short CoT examples or reasoning from both large and small teachers.
+            </li>
+            <li>
+              <strong><a href="https://huggingface.co/collections/Magpie-Align/magpielm-66e2221f31fa3bf05b10786a">MagpieLM</a></strong>: We maintained the official Magpie Hugging Face repository and released open-sourced synthetic data generated from open-source LLMs. Our aligned MagpieLM models are still <strong>SOTA</strong> small language models for chat.
+            </li>
+            <li>
+              <strong><a href="https://arxiv.org/abs/2502.12025">SafeChain</a></strong>: We investigated how long CoT impacts safety and revealed that long CoT does not necessarily enhance safety. We introduced SafeChain, a dataset designed to improve safety alignment while preserving reasoning capabilities.
+            </li>
+          </ul>
+
+          <!-- (2) Trustworthy AI -->
+          <p><strong>(2) Trustworthy AI</strong></p>
+          <ul>
+            <li>
+              <strong><a href="https://arxiv.org/abs/2406.12257">CleanGen</a></strong>: A novel decoding algorithm that defends against various generative backdoor attacks, including advertisement injection, code injection, and malicious content generation. 
+            </li>
+            <li>
+              <strong><a href="https://yuetl9.github.io/">Spectral Aggregation</a></strong>: A novel defense mechanism to aggregate the spectral features of multilayers to detect poisoned samples, restoring the effectiveness of the latent separability assumption in adaptive backdoor attacks.
+            </li>
+          </ul>
+
+          <!-- (3) Distributed Algorithms -->
+          <p><strong>(3) Distributed Algorithms</strong></p>
+          <ul>
+            <li>
+              <strong>Distributed Consensus</strong>: Work includes <a href="https://ieeexplore.ieee.org/document/10177399">Voting Validity</a>, <a href="https://ieeexplore.ieee.org/document/10071537">Wireless Distributed Consensus</a>, <a href="https://ieeexplore.ieee.org/document/10194560">Resource Allocation</a>, and <a href="https://arxiv.org/pdf/2502.12069">Distributed Consensus Network</a>.
+            </li>
+          </ul>
+
+          <h1 id="Publications">
+            <a href="#Publications" class="headerlink" title="Publications"></a>
+            Publications
+          </h1>
+          <p>(Updated 02.13, 2025)</p>
+          <ol>
+            <li>
+              <strong>Yuetai Li</strong>, Xiang Yue, Zhangchen Xu, Fengqing Jiang, Luyao Niu, Bhaskar Ramasubramanian, Bill Yuchen Lin, Radha Poovendran, "Small Models Struggle to Learn from Strong Reasoners"
+            </li>
+            <li>
+              Fengqing Jiang, Zhangchen Xu, <strong>Yuetai Li</strong>, Luyao Niu, Zhen Xiang, Bo Li, Bill Yuchen Lin, Radha Poovendran, "SafeChain: Revisiting Safety of Language Model with Long Chain-of-Thought Reasoning Capability"
+            </li>
+            <li>
+              <strong>Yuetai Li</strong>, Zhangchen Xu, Fengqing Jiang, Luyao Niu, Dinuka Sahabandu, Bhaskar Ramasubramanian, Radha Poovendran, "CLEANGEN: Mitigating Backdoor Attacks for Generation Tasks in Large Language Models" Accepted by EMNLP 2024, June 2024
+            </li>
+            <li>
+              <strong>Yuetai Li</strong>, Dinuka Sahabandu, Bhaskar Ramasubramanian, Radha Poovendran, "SpecAggre: Spectral Aggregation-based Latent Separability Recovery for Defense against Machine Learning Backdoor Attacks" 
+            </li>
+            <li>
+              <strong>Yuetai Li</strong>, Zhangchen Xu, Lei Zhang, Jon Crowcroft, "A Modularized Framework of Communication in Consensus", submitted to IEEE/ACM Transactions on Networking
+            </li>
+            <li>
+              Zhangchen Xu, <strong>Yuetai Li</strong>, Chenglin Feng, Lei Zhang, "Voting Validity: Exact Fault-tolerant Consensus", Accepted by the 37th IEEE International Parallel & Distributed Processing Symposium (IPDPS), December 2022 
+            </li>
+            <li>
+              <strong>Yuetai Li</strong>, Yixuan Fan, Lei Zhang, Jon Crowcroft, "RAFT Consensus Reliability in Wireless Networks: Probabilistic Analysis", Published in IEEE Internet of Things Journal, February 2023
+            </li>
+          </ol>
+        </article>
+      </div>
+    </main>
+
+    <div class="nav-wrap">
+      <div class="cd-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+      </div>
+    </div>
+
+    <footer id="page_footer">
+      <div class="footer_wrap">
+        <div class="copyright">
+          &copy;2022 - 2025 by Yuetai Li
+        </div>
+        <div class="theme-info">
+          Powered by
+          <a target="_blank" href="https://hexo.io" rel="nofollow noopener">Hexo</a>
+          &amp;
+          <a target="_blank" href="https://github.com/PhosphorW/hexo-theme-academia" rel="nofollow noopener">Academia Theme</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"
+    ></script>
+    <script>
+      // Back to top button
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 300) {
+          $('#backToTop').addClass('is-visible');
+        } else {
+          $('#backToTop').removeClass('is-visible');
+        }
+      });
+
+      $('#backToTop').click(function(e) {
+        e.preventDefault();
+        $('html, body').animate({scrollTop: 0}, 500);
+      });
+
+      // Mobile menu toggle
+      $('.menus_icon').click(function() {
+        $('.menus_items').slideToggle();
+      });
+
+      // Header scroll effect
+      let lastScrollTop = 0;
+      $(window).scroll(function() {
+        let scrollTop = $(this).scrollTop();
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+          $('#page_header').css('transform', 'translateY(-100%)');
+        } else {
+          $('#page_header').css('transform', 'translateY(0)');
+        }
+        lastScrollTop = scrollTop;
+      });
+    </script>
+  </body>
+</html>
