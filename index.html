@@ -280,6 +280,16 @@
             max-width: 750px;
             font-size: 1.05rem;
         }
+        
+        .research-description a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .research-description a:hover {
+            text-decoration: underline;
+        }
 
         .research-image {
             margin: 2rem 0;
@@ -309,6 +319,11 @@
             color: var(--text-secondary);
             font-style: italic;
             margin-top: 0.5rem;
+        }
+
+        .venue-highlight {
+            color: #993333;
+            font-weight: 500;
         }
 
         /* Mobile Responsive */
@@ -480,7 +495,7 @@
                         We investigated how long CoT impacts safety and revealed that long CoT does not necessarily enhance safety. We introduced SafeChain, a dataset designed to improve safety alignment while preserving reasoning capabilities.
                     </div>
                     <div class="venue-info">
-                        ICLR BiAlign Workshop (Oral)
+                        <span class="venue-highlight">ICLR BiAlign Workshop (Oral)</span>
                         <span class="award-badge">🏆 Best Honorable Mention</span>
                     </div>
                     <div class="research-image">
@@ -509,9 +524,6 @@
                 <h3 class="category-header">Distributed Algorithms</h3>
                 
                 <div class="research-item">
-                    <div class="research-title">
-                        <a href="#">Distributed Algorithms</a>
-                    </div>
                     <div class="research-description">
                         Work includes <a href="https://ieeexplore.ieee.org/document/10177399">Voting Validity</a>, 
                         <a href="https://ieeexplore.ieee.org/document/10071537">Wireless Distributed Consensus</a>, 
