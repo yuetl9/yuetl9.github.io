@@ -1,424 +1,674 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-    <title>Homepage</title>
-    <meta name="author" content="Yuetai Li" />
-    <link rel="shortcut icon" href="/image/favicon.png" />
-
-    <!-- 外部样式表 -->
-    <link rel="stylesheet" href="/css/index.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"
-    />
-
-    <!-- Google Fonts: Roboto 和 Merriweather -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Merriweather:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Hexo 等相关配置 -->
-    <meta name="generator" content="Hexo 6.3.0" />
-    <link rel="alternate" href="/atom.xml" title="Homepage" type="application/atom+xml" />
-
-    <!-- 内嵌样式，用于美化页面 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuetai Li - PhD Student at University of Washington</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-      body {
-        font-family: 'Roboto', sans-serif;
-        background: #fdfdfd;
-        color: #333;
-        margin: 0;
-        padding: 0;
-        font-size: 18px;
-        line-height: 1.8;
-      }
-      a {
-        font-family: inherit !important;
-        color: #4da6ff !important; /* 浅蓝色 */
-        text-decoration: none !important;
-        transition: color 0.3s !important;
-      }
-      a:hover {
-        color: #1e90ff !important; /* 悬停时稍深 */
-        text-decoration: underline !important;
-      }
-      em {
-        font-style: italic;
-        color: #555;
-      }
-      
-      h1, h2, h3, h4, h5, h6 {
-        font-family: 'Merriweather', serif;
-        margin-top: 1.5rem;
-        margin-bottom: 1rem;
-      }
-      
-      /* =============================
-         头部样式
-      ============================= */
-      header#page_header {
-        background-color: #ffffff;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1000;
-      }
-      .header_wrap {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 1rem; /* 统一左右内边距 */
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-      #blog_name a.blog_title {
-        font-size: 1.8rem;
-        font-weight: 700;
-        color: #333;
-      }
-      .menus_items {
-        list-style: none;
-        display: flex;
-        gap: 1rem;
-        margin: 0;
-        padding: 0;
-      }
-      .menus_item a.site-page {
-        font-weight: 500;
-        color: #555;
-      }
-      .menus_item a.site-page:hover {
-        color: #007bff;
-      }
-      /* 去除菜单按钮默认的边距和内边距 */
-      .menus_icon {
-        background: none;
-        border: none;
-        margin: 0;
-        padding: 0;
-      }
+        :root {
+            --primary: #007bff;
+            --primary-light: #0056b3;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --text-muted: #9ca3af;
+            --bg-white: #ffffff;
+            --bg-gray: #f8fafc;
+            --border: #e5e7eb;
+            --border-light: #f3f4f6;
+            --red: #dc2626;
+            --green: #059669;
+            --amber: #d97706;
+        }
 
-      /* =============================
-         主体内容
-      ============================= */
-      main#page_main {
-        padding-top: 90px; /* 为固定头部预留足够空间 */
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 2rem 1rem;
-      }
-      .side-card {
-        background: #ffffff;
-        padding: 1.5rem;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        margin-bottom: 2rem;
-        border-radius: 8px;
-      }
-      .author-avatar img {
-        border-radius: 50%;
-        width: 100px;
-        height: 100px;
-        object-fit: cover;
-      }
-      .author-discrip h3 {
-        margin: 0.5rem 0 0.25rem;
-        font-size: 1.4rem;
-      }
-      .author-discrip p.author-bio {
-        margin: 0;
-        color: #777;
-        font-style: italic;
-      }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-      /* =============================
-         文章内容
-      ============================= */
-      article {
-        background: #ffffff;
-        padding: 2rem;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        margin-bottom: 2rem;
-      }
-      article h1 {
-        font-size: 2.2rem;
-        border-bottom: 2px solid #eee;
-        padding-bottom: 0.5rem;
-        margin-bottom: 1rem;
-      }
-      article p {
-        margin: 1.5rem 0;
-      }
-      ul, ol {
-        margin: 1rem 0;
-        padding-left: 1.6rem;
-      }
-      li {
-        margin: 0.8rem 0;
-        line-height: 1.8;
-      }
+        body {
+            font-family: 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-gray);
+        }
 
-      /* =============================
-         导航 & 回到顶部
-      ============================= */
-      .nav-wrap {
-        position: fixed;
-        right: 1rem;
-        bottom: 1rem;
-        z-index: 1000;
-      }
-      .cd-top {
-        background: #007bff;
-        color: #fff;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        transition: background 0.3s;
-      }
-      .cd-top:hover {
-        background: #0056b3;
-      }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
 
-      /* =============================
-         页脚
-      ============================= */
-      footer#page_footer {
-        background-color: #ffffff;
-        padding: 1rem 0;
-        text-align: center;
-        border-top: 1px solid #eee;
-        margin-top: 2rem;
-      }
-      .footer_wrap {
-        max-width: 1200px;
-        margin: 0 auto;
-        font-size: 0.875rem;
-        color: #777;
-      }
-      .theme-info a {
-        color: #007bff;
-      }
-      .theme-info a:hover {
-        text-decoration: underline;
-      }
-      
-      [id]:target::before {
-        content: "";
-        display: block;
-        height: 90px; /* 等于 header 高度 */
-        margin-top: -90px;
-      }
+        /* Header */
+        .header {
+            background: var(--bg-white);
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+        }
+
+        .profile-section {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+        }
+
+        .profile-image {
+            width: 160px;
+            height: 160px;
+            border-radius: 12px;
+            object-fit: cover;
+            flex-shrink: 0;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+
+        .profile-info {
+            flex: 1;
+        }
+
+        .name {
+            font-family: 'Raleway', sans-serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .title {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .affiliation {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        .logo {
+            width: 24px;
+            height: 24px;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+
+        .contact-link:hover {
+            color: var(--primary);
+        }
+
+        .cv-link {
+            background: var(--primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.2s ease;
+        }
+
+        .cv-link:hover {
+            background: var(--primary-light);
+        }
+
+        /* Content Sections */
+        .section {
+            background: var(--bg-white);
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+        }
+
+        .section-title {
+            font-family: 'Raleway', serif;
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 1.25rem;
+        }
+
+        .about-text a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .about-text a:hover {
+            text-decoration: underline;
+        }
+
+        .collaboration-note {
+            background: #fef9e7;
+            border-left: 3px solid #f59e0b;
+            padding: 1rem;
+            margin-top: 1.5rem;
+            font-style: italic;
+            color: #92400e;
+        }
+
+        /* Research Areas */
+        .research-category {
+            margin-bottom: 2rem;
+        }
+
+        .research-category:last-child {
+            margin-bottom: 0;
+        }
+
+        .category-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .category-title i {
+            color: var(--primary);
+        }
+
+        .research-list {
+            list-style: none;
+        }
+
+        .research-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .research-item:last-child {
+            margin-bottom: 0;
+            border-bottom: none;
+        }
+
+        .paper-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .paper-title a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .paper-title a:hover {
+            text-decoration: underline;
+        }
+
+        .new-badge {
+            background: linear-gradient(135deg, var(--red), #ef4444);
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            margin-left: 0.5rem;
+            letter-spacing: 0.5px;
+        }
+
+        .paper-description {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Publications */
+        .publication-list {
+            list-style: none;
+        }
+
+        .publication-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-light);
+            position: relative;
+            padding-left: 2.5rem;
+        }
+
+        .publication-item:last-child {
+            border-bottom: none;
+        }
+
+        .publication-item::before {
+            content: counter(publication-counter);
+            counter-increment: publication-counter;
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 600;
+            width: 2rem;
+        }
+
+        .publication-list {
+            counter-reset: publication-counter;
+        }
+
+        .pub-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .pub-authors {
+            color: var(--text-secondary);
+            margin-bottom: 0.25rem;
+            font-size: 0.95rem;
+        }
+
+        .pub-venue {
+            color: var(--green);
+            font-weight: 500;
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        .pub-links {
+            margin-top: 0.75rem;
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .pub-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            background: var(--bg-gray);
+            color: var(--text-secondary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            border: 1px solid var(--border);
+        }
+
+        .pub-link:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .profile-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-image {
+                width: 120px;
+                height: 120px;
+                margin: 0 auto;
+            }
+
+            .name {
+                font-size: 1.75rem;
+            }
+
+            .section {
+                padding: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .contact-links {
+                justify-content: center;
+            }
+
+            .research-item {
+                flex-direction: column;
+            }
+
+            .research-image {
+                width: 100%;
+                height: 150px;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Selection */
+        ::selection {
+            background: var(--primary);
+            color: white;
+        }
     </style>
-  </head>
-
-  <body>
-    <header id="page_header">
-      <div class="header_wrap">
-        <div id="blog_name">
-          <a class="blog_title" id="site-name" href="/">Homepage</a>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <div class="profile-section">
+                <img src="/image/profile.jpg" alt="Yuetai Li" class="profile-image" 
+                     onerror="this.src='/img/profile.png'">
+                
+                <div class="profile-info">
+                    <h1 class="name">Yuetai Li</h1>
+                    <div class="title">PhD Student</div>
+                    <div class="affiliation">
+                        <svg class="logo" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L2 7v10c0 5.55 3.84 9.739 9 11 5.16-1.261 9-5.45 9-11V7l-10-5z"/>
+                        </svg>
+                        University of Washington
+                    </div>
+                    
+                    <div class="contact-links">
+                        <a href="mailto:yuetaili@uw.edu" class="contact-link">
+                            <i class="fas fa-envelope"></i>
+                            yuetaili@uw.edu
+                        </a>
+                        <a href="mailto:yuetail9@163.com" class="contact-link">
+                            <i class="fas fa-envelope"></i>
+                            yuetail9@163.com
+                        </a>
+                        <a href="/files/cv.pdf" class="cv-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i>
+                            CV
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <button class="menus_icon">
-          <div class="navicon"></div>
-        </button>
-        <ul class="menus_items">
-          <li class="menus_item">
-            <a class="site-page" href="/files/cv.pdf">CV</a>
-          </li>
-          <!-- <li class="menus_item">
-            <a class="site-page" href="/files/Research_Proposal.pdf">Research Proposal</a>
-          </li> -->
-        </ul>
-      </div>
-    </header>
 
-    <main id="page_main">
-      <div class="side-card sticky">
-        <div class="card-wrap" itemscope itemtype="http://schema.org/Person">
-          <div class="author-avatar">
-            <img
-              class="avatar-img"
-              src="/image/profile.jpg"
-              onerror="this.onerror=null;this.src='/img/profile.png'"
-              alt="avatar"
-            />
-          </div>
-          <div class="author-discrip">
-            <h3>Yuetai Li</h3>
-            <p class="author-bio">yuetaili@uw.edu yuetail9@163.com</p>
-          </div>
-          <div class="author-links">
-            <button class="btn m-social-links">Links</button>
-          </div>
+        <!-- About Section -->
+        <div class="section">
+            <h2 class="section-title">About Me</h2>
+            
+            <p class="about-text">
+                I am a second-year PhD student at 
+                <a href="https://labs.ece.uw.edu/nsl/faculty/radha/" target="_blank">Network Security Lab</a> 
+                at University of Washington, advised by 
+                <a href="https://people.ece.uw.edu/radha/" target="_blank">Prof. Radha Poovendran</a>. 
+                I am fortunate to work closely with 
+                <a href="https://xiangyue9607.github.io/" target="_blank">Dr. Xiang Yue</a> at CMU LTI, 
+                <a href="https://zhangchenxu.com/">Zhangchen Xu</a>, 
+                <a href="https://luyaoniu.github.io/">Prof. Luyao Niu</a>, and 
+                <a href="https://yuchenlin.xyz/">Prof. Bill Yuchen Lin</a> at UW.
+            </p>
+
+            <p class="about-text">
+                Prior to UW, I obtained my Bachelor degree in Communication Engineering at 
+                University of Glasgow (UofG). During my undergrad, I was advised by 
+                <a href="https://www.gla.ac.uk/schools/engineering/staff/leizhang/">Prof. Lei Zhang</a> at UofG. 
+                I am also fortunate to work with 
+                <a href="https://www.cl.cam.ac.uk/~jac22/">Prof. Jon Crowcroft</a> at University of Cambridge.
+            </p>
+
+            <p class="about-text">
+                My <a href="/files/cv.pdf">CV</a> (updated 02.13, 2025) shows more details.
+            </p>
+
+            <div class="collaboration-note">
+                I am open to collaboration and discuss interesting ideas! Email yuetaili@uw.edu if you would like to share any opportunities, collaborations, or just chat!
+            </div>
         </div>
-      </div>
 
-      <div class="page" itemscope itemtype="http://schema.org/CreativeWork">
-        <article>
-          <h1 id="Bio">
-            <a href="#Bio" class="headerlink" title="Bio"></a>About Me
-          </h1>
-          <p>
-            I am a second-year PhD student at
-            <a
-              href="https://labs.ece.uw.edu/nsl/faculty/radha/"
-              target="_blank"
-              title="Network Security Lab"
-              >Network Security Lab</a
-            >
-            at University of Washington, advised by
-            <a
-              href="https://people.ece.uw.edu/radha/"
-              target="_blank"
-              title="Prof. Radha Poovendran's Webpage"
-              >Prof. Radha Poovendran</a
-            >. I am fortunate to work closely with
-            <a
-              href="https://xiangyue9607.github.io/"
-              target="_blank"
-              title="Yue Xiang's Webpage"
-              >Dr. Xiang Yue</a
-            >
-            at CMU LTI,
-            <a href="https://zhangchenxu.com/">Zhangchen Xu</a>, <a href="https://luyaoniu.github.io/">Prof. Luyao Niu</a>, and <a href="https://yuchenlin.xyz/">Prof. Bill Yuchen Lin</a> at UW.
-          </p>
-          <p>
-            Prior to UW, I obtained my Bachelor degree in Communication Engineering at
-            University of Glasgow (UofG). During my undergrad, I was advised
-            by <a href="https://www.gla.ac.uk/schools/engineering/staff/leizhang/">Prof. Lei Zhang</a> at UofG. I am also fortunate to work with <a href="https://www.cl.cam.ac.uk/~jac22/">Prof. Jon Crowcroft</a> at University of Cambridge. 
-          </p>
-          <p>My <a href="/files/cv.pdf">CV</a> (updated 02.13, 2025) shows more details.</p>
-          <p><em style="color: #A52A2A;">I am open to collaboration and discuss interesting ideas! Email yuetaili@uw.edu if you would like to share any opportunities, collaborations, or just chat!</em></p>
+        <!-- Research Interests -->
+        <div class="section">
+            <h2 class="section-title">Research Interests</h2>
+            
+            <p class="about-text">
+                My primary interests lie broadly in <strong>LLM Reasoning</strong>, <strong>Synthetic Dataset</strong>, 
+                and <strong>Trustworthy AI</strong>. I am particularly interested in: (1) understanding the reasoning 
+                capabilities of LLMs through rigorous analysis (2) investigating synthetic datasets optimized for 
+                effective model learning. My current research directions include:
+            </p>
 
-          <h1 id="Research-Interests">
-            <a href="#Research-Interests" class="headerlink" title="Research Interests"></a>
-            Research Interests
-          </h1>
-          <p>
-            My primary interests lie broadly in <strong>LLM Reasoning</strong>, <strong>Synthetic Dataset</strong>,
-            and <strong>Trustworthy AI</strong>. I am particularly interested in: (1) understanding the reasoning capabilities of LLMs through rigorous analysis (2) investigating synthetic datasets optimized for effective model learning. My current research directions include:</p>
+            <div class="research-category">
+                <h3 class="category-title">
+                    Reasoning and Synthetic Dataset
+                </h3>
+                <ul class="research-list">
+                    <li class="research-item">
+                        <div class="research-image">
+                            <img src="/path/to/tinyv-teaser.png" alt="TinyV Overview" onerror="this.style.display='none'">
+                        </div>
+                        <div class="research-content">
+                            <div class="paper-title">
+                                <a href="https://arxiv.org/pdf/2505.14625">TinyV: Reducing False Negatives in Verification Improves RL for LLM Reasoning</a>
+                            </div>
+                            <div class="paper-description">
+                                We investigate the widespread problem of false negatives in answer verification for RL training of LLMs. Our study reveals that over 38% of model responses suffer from false negatives, severely impairing training efficiency. We propose TinyV, a lightweight LLM-based verifier that augments existing rule-based methods to recover valid responses and provide more accurate reward estimates.
+                            </div>
+                        </div>
+                    </li>
+                    <li class="research-item">
+                        <div class="research-image">
+                            <img src="/path/to/small-model-teaser.png" alt="Small Model Learnability" onerror="this.style.display='none'">
+                        </div>
+                        <div class="research-content">
+                            <div class="paper-title">
+                                <a href="https://arxiv.org/pdf/2502.12143">Small Model Learnability Gap</a>
+                            </div>
+                            <div class="paper-description">
+                                We revealed that small models do not consistently benefit from long CoT or distillation from large teachers. Instead, they perform better on shorter, simpler reasoning chains that better align with their intrinsic learning capacity. We propose Mix Distillation, a simple yet effective strategy that combines both long and short CoT examples or reasoning from both large and small teachers.
+                            </div>
+                        </div>
+                    </li>
+                    <li class="research-item">
+                        <div class="research-image">
+                            <img src="/path/to/magpie-teaser.png" alt="MagpieLM" onerror="this.style.display='none'">
+                        </div>
+                        <div class="research-content">
+                            <div class="paper-title">
+                                <a href="https://huggingface.co/collections/Magpie-Align/magpielm-66e2221f31fa3bf05b10786a">MagpieLM</a>
+                            </div>
+                            <div class="paper-description">
+                                We maintained the official Magpie Hugging Face repository and released open-sourced synthetic data generated from open-source LLMs. Our aligned MagpieLM models are still <strong>SOTA</strong> small language models for chat.
+                            </div>
+                        </div>
+                    </li>
+                    <li class="research-item">
+                        <div class="research-image">
+                            <img src="/path/to/safechain-teaser.png" alt="SafeChain" onerror="this.style.display='none'">
+                        </div>
+                        <div class="research-content">
+                            <div class="paper-title">
+                                <a href="https://arxiv.org/abs/2502.12025">SafeChain</a>
+                            </div>
+                            <div class="paper-description">
+                                We investigated how long CoT impacts safety and revealed that long CoT does not necessarily enhance safety. We introduced SafeChain, a dataset designed to improve safety alignment while preserving reasoning capabilities.
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
 
-          <!-- (1) Reasoning and Synthetic Dataset -->
-          <p><strong>(1) Reasoning and Synthetic Dataset</strong></p>
-          <ul>
-            <li>
-              <strong><a href="https://arxiv.org/pdf/2502.12143">Small Model Learnability Gap</a></strong>: We revealed that small models do not consistently benefit from long CoT or distillation from large teachers. Instead, they perform better on shorter, simpler reasoning chains that better align with their intrinsic learning capacity. We propose <em>Mix Distillation</em>, a simple yet effective strategy that combines both long and short CoT examples or reasoning from both large and small teachers.
-            </li>
-            <li>
-              <strong><a href="https://huggingface.co/collections/Magpie-Align/magpielm-66e2221f31fa3bf05b10786a">MagpieLM</a></strong>: We maintained the official Magpie Hugging Face repository and released open-sourced synthetic data generated from open-source LLMs. Our aligned MagpieLM models are still <strong>SOTA</strong> small language models for chat.
-            </li>
-            <li>
-              <strong><a href="https://arxiv.org/abs/2502.12025">SafeChain</a></strong>: We investigated how long CoT impacts safety and revealed that long CoT does not necessarily enhance safety. We introduced SafeChain, a dataset designed to improve safety alignment while preserving reasoning capabilities.
-            </li>
-          </ul>
+            <div class="research-category">
+                <h3 class="category-title">
+                    Trustworthy AI
+                </h3>
+                <ul class="research-list">
+                    <li class="research-item">
+                        <div class="research-image">
+                            <img src="/path/to/cleangen-teaser.png" alt="CleanGen" onerror="this.style.display='none'">
+                        </div>
+                        <div class="research-content">
+                            <div class="paper-title">
+                                <a href="https://arxiv.org/abs/2406.12257">CleanGen</a>
+                            </div>
+                            <div class="paper-description">
+                                A novel decoding algorithm that defends against various generative backdoor attacks, including advertisement injection, code injection, and malicious content generation.
+                            </div>
+                        </div>
+                    </li>
+                    <li class="research-item">
+                        <div class="research-image">
+                            <img src="/path/to/spectral-teaser.png" alt="Spectral Aggregation" onerror="this.style.display='none'">
+                        </div>
+                        <div class="research-content">
+                            <div class="paper-title">
+                                <a href="https://yuetl9.github.io/">Spectral Aggregation</a>
+                            </div>
+                            <div class="paper-description">
+                                A novel defense mechanism to aggregate the spectral features of multilayers to detect poisoned samples, restoring the effectiveness of the latent separability assumption in adaptive backdoor attacks.
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
 
-          <!-- (2) Trustworthy AI -->
-          <p><strong>(2) Trustworthy AI</strong></p>
-          <ul>
-            <li>
-              <strong><a href="https://arxiv.org/abs/2406.12257">CleanGen</a></strong>: A novel decoding algorithm that defends against various generative backdoor attacks, including advertisement injection, code injection, and malicious content generation. 
-            </li>
-            <li>
-              <strong><a href="https://yuetl9.github.io/">Spectral Aggregation</a></strong>: A novel defense mechanism to aggregate the spectral features of multilayers to detect poisoned samples, restoring the effectiveness of the latent separability assumption in adaptive backdoor attacks.
-            </li>
-          </ul>
+            <div class="research-category">
+                <h3 class="category-title">
+                    Distributed Algorithms
+                </h3>
+                <ul class="research-list">
+                    <li class="research-item">
+                        <div class="research-image">
+                            <img src="/path/to/distributed-teaser.png" alt="Distributed Algorithms" onerror="this.style.display='none'">
+                        </div>
+                        <div class="research-content">
+                            <div class="paper-description">
+                                Work includes <a href="https://ieeexplore.ieee.org/document/10177399">Voting Validity</a>, 
+                                <a href="https://ieeexplore.ieee.org/document/10071537">Wireless Distributed Consensus</a>, 
+                                <a href="https://ieeexplore.ieee.org/document/10194560">Resource Allocation</a>, and 
+                                <a href="https://arxiv.org/pdf/2502.12069">Distributed Consensus Network</a>.
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
-          <!-- (3) Distributed Algorithms -->
-          <p><strong>(3) Distributed Algorithms</strong></p>
-          <ul>
-            <li>
-              <strong>Distributed Consensus</strong>: Work includes <a href="https://ieeexplore.ieee.org/document/10177399">Voting Validity</a>, <a href="https://ieeexplore.ieee.org/document/10071537">Wireless Distributed Consensus</a>, <a href="https://ieeexplore.ieee.org/document/10194560">Resource Allocation</a>, and <a href="https://arxiv.org/pdf/2502.12069">Distributed Consensus Network</a>.
-            </li>
-          </ul>
-
-          <h1 id="Publications">
-            <a href="#Publications" class="headerlink" title="Publications"></a>
-            Publications
-          </h1>
-          <p>(Updated 02.13, 2025)</p>
-          <ol>
-            <li>
-              <strong>Yuetai Li</strong>, Xiang Yue, Zhangchen Xu, Fengqing Jiang, Luyao Niu, Bhaskar Ramasubramanian, Bill Yuchen Lin, Radha Poovendran, “Small Models Struggle to Learn from Strong Reasoners”
-            </li>
-            <li>
-              Fengqing Jiang, Zhangchen Xu, <strong>Yuetai Li</strong>, Luyao Niu, Zhen Xiang, Bo Li, Bill Yuchen Lin, Radha Poovendran, “SafeChain: Revisiting Safety of Language Model with Long Chain-of-Thought Reasoning Capability”
-            </li>
-            <li>
-              <strong>Yuetai Li</strong>, Zhangchen Xu, Fengqing Jiang, Luyao Niu, Dinuka Sahabandu, Bhaskar Ramasubramanian, Radha Poovendran, “CLEANGEN: Mitigating Backdoor Attacks for Generation Tasks in Large Language Models” Accepted by EMNLP 2024, June 2024
-            </li>
-            <li>
-              <strong>Yuetai Li</strong>, Dinuka Sahabandu, Bhaskar Ramasubramanian, Radha Poovendran, "SpecAggre: Spectral Aggregation-based Latent Separability Recovery for Defense against Machine Learning Backdoor Attacks" 
-            </li>
-            <li>
-              <strong>Yuetai Li</strong>, Zhangchen Xu, Lei Zhang, Jon Crowcroft, “A Modularized Framework of Communication in Consensus”, submitted to IEEE/ACM Transactions on Networking
-            </li>
-            <li>
-              Zhangchen Xu, <strong>Yuetai Li</strong>, Chenglin Feng, Lei Zhang, “Voting Validity: Exact Fault-tolerant Consensus”, Accepted by the 37th IEEE International Parallel & Distributed Processing Symposium (IPDPS), December 2022 
-            </li>
-            <li>
-              <strong>Yuetai Li</strong>, Yixuan Fan, Lei Zhang, Jon Crowcroft, “RAFT Consensus Reliability in Wireless Networks: Probabilistic Analysis”, Published in IEEE Internet of Things Journal, February 2023
-            </li>
-          </ol>
-        </article>
-      </div>
-    </main>
-
-    <div class="nav-wrap">
-      <div class="nav">
-        <button class="site-nav">
-          <div class="navicon"></div>
-        </button>
-        <ul class="nav_items">
-          <li class="nav_item">
-            <a class="nav-page" href="/files/cv.pdf">CV</a>
-          </li>
-          <li class="nav_item">
-            <a class="nav-page" href="/files/Research_Proposal.pdf">Research Proposal</a>
-          </li>
-        </ul>
-      </div>
-      <div class="cd-top">
-        <i class="fa fa-arrow-up" aria-hidden="true"></i>
-      </div>
+        <!-- Publications -->
+        <div class="section">
+            <h2 class="section-title">Selected Publications</h2>
+            
+            <ol class="publication-list">
+                <li class="publication-item">
+                    <div class="pub-title">
+                        TinyV: Reducing False Negatives in Verification Improves RL for LLM Reasoning
+                    </div>
+                    <div class="pub-authors">
+                        Zhangchen Xu*, <strong>Yuetai Li*</strong>, Fengqing Jiang, Bhaskar Ramasubramanian, Luyao Niu, Bill Yuchen Lin, Radha Poovendran
+                    </div>
+                    <div class="pub-venue">Preprint. Under review. (*Equal contribution)</div>
+                    <div class="pub-links">
+                        <a href="#" target="_blank">Paper</a>
+                        <a href="#" target="_blank">Code</a>
+                    </div>
+                </li>
+                <li class="publication-item">
+                    <div class="pub-title">Small Models Struggle to Learn from Strong Reasoners</div>
+                    <div class="pub-authors">
+                        <strong>Yuetai Li</strong>, Xiang Yue, Zhangchen Xu, Fengqing Jiang, Luyao Niu, Bhaskar Ramasubramanian, Bill Yuchen Lin, Radha Poovendran
+                    </div>
+                    <div class="pub-venue">Preprint</div>
+                    <div class="pub-links">
+                        <a href="#" target="_blank">Paper</a>
+                        <a href="#" target="_blank">Code</a>
+                    </div>
+                </li>
+                <li class="publication-item">
+                    <div class="pub-title">SafeChain: Revisiting Safety of Language Model with Long Chain-of-Thought Reasoning Capability</div>
+                    <div class="pub-authors">
+                        Fengqing Jiang, Zhangchen Xu, <strong>Yuetai Li</strong>, Luyao Niu, Zhen Xiang, Bo Li, Bill Yuchen Lin, Radha Poovendran
+                    </div>
+                    <div class="pub-venue">Preprint</div>
+                    <div class="pub-links">
+                        <a href="#" target="_blank">Paper</a>
+                        <a href="#" target="_blank">Code</a>
+                    </div>
+                </li>
+                <li class="publication-item">
+                    <div class="pub-title">CLEANGEN: Mitigating Backdoor Attacks for Generation Tasks in Large Language Models</div>
+                    <div class="pub-authors">
+                        <strong>Yuetai Li</strong>, Zhangchen Xu, Fengqing Jiang, Luyao Niu, Dinuka Sahabandu, Bhaskar Ramasubramanian, Radha Poovendran
+                    </div>
+                    <div class="pub-venue">EMNLP 2024</div>
+                    <div class="pub-links">
+                        <a href="#" target="_blank">Paper</a>
+                        <a href="#" target="_blank">Code</a>
+                    </div>
+                </li>
+                <li class="publication-item">
+                    <div class="pub-title">A Modularized Framework of Communication in Consensus</div>
+                    <div class="pub-authors">
+                        <strong>Yuetai Li</strong>, Zhangchen Xu, Lei Zhang, Jon Crowcroft
+                    </div>
+                    <div class="pub-venue">Submitted to IEEE/ACM Transactions on Networking</div>
+                    <div class="pub-links">
+                        <a href="#" target="_blank">Paper</a>
+                        <a href="#" target="_blank">Code</a>
+                    </div>
+                </li>
+                <li class="publication-item">
+                    <div class="pub-title">Voting Validity: Exact Fault-tolerant Consensus</div>
+                    <div class="pub-authors">
+                        Zhangchen Xu, <strong>Yuetai Li</strong>, Chenglin Feng, Lei Zhang
+                    </div>
+                    <div class="pub-venue">IPDPS 2023</div>
+                    <div class="pub-links">
+                        <a href="#" target="_blank">Paper</a>
+                        <a href="#" target="_blank">Code</a>
+                    </div>
+                </li>
+                <li class="publication-item">
+                    <div class="pub-title">RAFT Consensus Reliability in Wireless Networks: Probabilistic Analysis</div>
+                    <div class="pub-authors">
+                        <strong>Yuetai Li</strong>, Yixuan Fan, Lei Zhang, Jon Crowcroft
+                    </div>
+                    <div class="pub-venue">IEEE Internet of Things Journal, 2023</div>
+                    <div class="pub-links">
+                        <a href="#" target="_blank">Paper</a>
+                        <a href="#" target="_blank">Code</a>
+                    </div>
+                </li>
+            </ol>
+        </div>
     </div>
-
-    <footer id="page_footer">
-      <div class="footer_wrap">
-        <div class="copyright">
-          &copy;2022 - 2023 by Yuetai Li
-        </div>
-        <div class="theme-info">
-          Powered by
-          <a target="_blank" href="https://hexo.io" rel="nofollow noopener">Hexo</a>
-          &amp;
-          <a target="_blank" href="https://github.com/PhosphorW/hexo-theme-academia" rel="nofollow noopener">Academia Theme</a>
-        </div>
-      </div>
-    </footer>
-
-    <!-- 脚本 -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/jquery-pjax@latest/jquery.pjax.min.js"
-    ></script>
-    <script src="/js/main.js"></script>
-  </body>
+</body>
 </html>
-
 
