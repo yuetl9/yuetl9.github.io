@@ -227,7 +227,7 @@
             margin: 2.5rem 0;
             font-style: italic;
             color: #92400e;
-            max-width: 650px;
+            max-width: 750px;
         }
 
         /* Research Sections */
@@ -297,8 +297,8 @@
         }
 
         .research-image img {
-            max-width: 60%;
-            max-height: 240px;
+            max-width:70%;
+            max-height: 260px;
             object-fit: contain;
             border-radius: 0.75rem;
             box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
@@ -410,8 +410,14 @@
                     <a href="mailto:yuetaili@uw.edu" class="contact-btn" title="Email">
                         <i class="fas fa-envelope"></i>
                     </a>
-                    <a href="mailto:yuetail9@163.com" class="contact-btn" title="Email">
-                        <i class="fas fa-envelope"></i>
+                    <a href="https://scholar.google.com/citations?user=6Sof_XAAAAAJ&hl=en" class="contact-btn" title="Google Scholar" target="_blank">
+                        <i class="fas fa-graduation-cap"></i>
+                    </a>
+                    <a href="www.linkedin.com/in/yuetai-li-81a000309" class="contact-btn" title="LinkedIn" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://x.com/yuetai12575" class="contact-btn" title="X (Twitter)" target="_blank">
+                        <i class="fab fa-x-twitter"></i>
                     </a>
                     <a href="/files/cv.pdf" class="cv-btn" target="_blank">CV</a>
                 </div>
@@ -465,20 +471,17 @@
             <div class="research-category">
                 <h3 class="category-header">Reasoning and Synthetic Dataset</h3>
 
-
                 <div class="research-item">
                     <div class="research-title">
                         <a href="https://arxiv.org/abs/2505.20196">Temporal Forgetting</a>
                     </div>
                     <div class="research-description">
-                        We observed that during RL training process of Deepseek-R1-1.5B model, 76.7% of AIME problems were solved correctly at some intermediate checkpoint, yet only 30% remained correct in the final model. This indicates that many problems answered correctly during training were ultimately incorrect in the final checkpoint. We term this phenomenon as <strong></strong>Temporal Forgetting</strong>. Inspired by this, we proposed <strong>Temporal Sampling</strong>: This method utilizes training dynamics as a source of answer diversity by distributing inference samples across multiple distinct checkpoints from the training trajectory, rather than relying solely on the single final checkpoint.
+                        We observed that during RL training process of Deepseek-R1-1.5B model, 76.7% of AIME problems were solved correctly at some intermediate checkpoint, yet only 30% remained correct in the final model. This indicates that many problems answered correctly during training were ultimately incorrect in the final checkpoint. We term this phenomenon as <strong>Temporal Forgetting</strong>. Inspired by this, we proposed <strong>Temporal Sampling</strong>: This method utilizes training dynamics as a source of answer diversity by distributing inference samples across multiple distinct checkpoints from the training trajectory, rather than relying solely on the single final checkpoint.
                     </div>
                     <div class="research-image">
                         <img src="image/Temporal_Sampling.jpg" alt="Temporal Sampling Overview" onerror="this.style.display='none'">
                     </div>
                 </div>
-
-
 
                 <div class="research-item">
                     <div class="research-title">
@@ -532,7 +535,6 @@
                     <img src="image/MagpieLM.jpg" alt="MagpieLM" onerror="this.style.display='none'">
                 </div>
             </div>
-
 
             <div class="research-category">
                 <h3 class="category-header">Trustworthy AI</h3>
