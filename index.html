@@ -8,7 +8,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -110,18 +110,34 @@
         }
 
         .name {
-            font-family: 'Raleway', sans-serif;
-            font-size: 2.8rem;
-            font-weight: 600;
+            font-family: 'Comfortaa', 'Nunito', system-ui, -apple-system, sans-serif;
+            font-size: 3.2rem;
+            font-weight: 700;
             color: var(--text-primary);
             margin-bottom: 0.5rem;
-            line-height: 1.2;
+            line-height: 1.1;
+            letter-spacing: -0.01em;
         }
 
         .title {
             font-size: 1.3rem;
             color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .affiliation {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 1.1rem;
+            color: var(--text-secondary);
             margin-bottom: 2rem;
+        }
+
+        .logo {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
         }
 
         .contact-buttons {
@@ -177,11 +193,12 @@
         }
 
         .section-title {
-            font-family: 'Raleway', sans-serif;
-            font-size: 2.2rem;
-            font-weight: 600;
+            font-family: 'Nunito', 'Comfortaa', system-ui, -apple-system, sans-serif;
+            font-size: 2.4rem;
+            font-weight: 700;
             color: var(--text-primary);
             margin-bottom: 2.5rem;
+            letter-spacing: -0.01em;
         }
 
         .about-text {
@@ -223,11 +240,12 @@
         }
 
         .category-header {
-            font-family: 'Raleway', sans-serif;
-            font-size: 1.6rem;
-            font-weight: 600;
+            font-family: 'Nunito', 'Comfortaa', system-ui, -apple-system, sans-serif;
+            font-size: 1.7rem;
+            font-weight: 700;
             color: var(--text-primary);
             margin-bottom: 2.5rem;
+            letter-spacing: -0.01em;
         }
 
         .research-item {
@@ -239,9 +257,11 @@
         }
 
         .research-title {
-            font-size: 1.3rem;
-            font-weight: 600;
+            font-family: 'Nunito', 'Comfortaa', system-ui, -apple-system, sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
             margin-bottom: 1rem;
+            letter-spacing: -0.01em;
         }
 
         .research-title a {
@@ -358,12 +378,10 @@
         <!-- Header -->
         <header class="header">
             <div class="profile-image-container">
-                <img src="image/profile.jpg" alt="Yuetai Li" class="profile-image" 
+                <img src="/image/profile.jpg" alt="Yuetai Li" class="profile-image" 
                      onerror="this.src='/img/profile.png'">
             </div>
             
-
-
             <div class="profile-info">
                 <h1 class="name">Yuetai Li</h1>
                 <div class="title">PhD Student</div>
@@ -491,6 +509,9 @@
                 <h3 class="category-header">Distributed Algorithms</h3>
                 
                 <div class="research-item">
+                    <div class="research-title">
+                        <a href="#">Distributed Algorithms</a>
+                    </div>
                     <div class="research-description">
                         Work includes <a href="https://ieeexplore.ieee.org/document/10177399">Voting Validity</a>, 
                         <a href="https://ieeexplore.ieee.org/document/10071537">Wireless Distributed Consensus</a>, 
