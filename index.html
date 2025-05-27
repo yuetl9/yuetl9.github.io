@@ -403,6 +403,22 @@
             background: var(--primary);
             color: white;
         }
+
+        /* 为研究图片添加合适的尺寸 */
+        .research-image {
+            width: 100%;
+            max-width: 600px;
+            margin: 15px auto;
+            text-align: center;
+        }
+        
+        .research-image img {
+            max-width: 100%;
+            max-height: 250px;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body>
@@ -490,9 +506,6 @@
                 </h3>
                 <ul class="research-list">
                     <li class="research-item">
-                        <div class="research-image">
-                            <img src="image/TinyV.jpg" alt="TinyV Overview" onerror="this.style.display='none'">
-                        </div>
                         <div class="research-content">
                             <div class="paper-title">
                                 <a href="https://arxiv.org/pdf/2505.14625">TinyV</a>
@@ -500,11 +513,14 @@
                             <div class="paper-description">
                                 Our study reveals that over 38% of model responses suffer from false negatives in answer verification for RL training of LLMs, severely impairing training efficiency. We propose TinyV, a lightweight LLM-based verifier that augments existing rule-based methods to provide more accurate reward estimates.
                             </div>
+                            <div class="research-image">
+                              <img src="image/TinyV.jpg" alt="TinyV Overview" onerror="this.style.display='none'">
+                          </div>
                         </div>
                     </li>
                     <li class="research-item">
                         <div class="research-image">
-                            <img src="/path/to/small-model-teaser.png" alt="Small Model Learnability" onerror="this.style.display='none'">
+                            <img src="image/small_model.png" alt="Small Model Learnability" onerror="this.style.display='none'">
                         </div>
                         <div class="research-content">
                             <div class="paper-title">
