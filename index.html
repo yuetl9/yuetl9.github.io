@@ -297,11 +297,13 @@
         }
 
         .research-image img {
-            max-width: 100%;
-            max-height: 350px;
+            max-width: 60%;
+            max-height: 240px;
             object-fit: contain;
             border-radius: 0.75rem;
             box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            display: block;
+            margin: 0 auto;
         }
 
         .award-badge {
@@ -466,10 +468,10 @@
 
                 <div class="research-item">
                     <div class="research-title">
-                        <a href="https://arxiv.org/abs/2505.20196">Temporal Sampling</a>
+                        <a href="https://arxiv.org/abs/2505.20196">Temporal Forgetting</a>
                     </div>
                     <div class="research-description">
-                        We observed that during RL training process of Deepseek-R1-1.5B model, 76.7% of AIME problems were solved correctly at some intermediate checkpoint, yet only 30% remained correct in the final model. This indicates that many problems answered correctly during training were ultimately incorrect in the final checkpoint. We term this phenomenon as Temporal Forgetting. Inspired by this, we proposed Temporal Sampling: This method utilizes training dynamics as a source of answer diversity by distributing inference samples across multiple distinct checkpoints from the training trajectory, rather than relying solely on the single final checkpoint.
+                        We observed that during RL training process of Deepseek-R1-1.5B model, 76.7% of AIME problems were solved correctly at some intermediate checkpoint, yet only 30% remained correct in the final model. This indicates that many problems answered correctly during training were ultimately incorrect in the final checkpoint. We term this phenomenon as <strong></strong>Temporal Forgetting</strong>. Inspired by this, we proposed <strong>Temporal Sampling</strong>: This method utilizes training dynamics as a source of answer diversity by distributing inference samples across multiple distinct checkpoints from the training trajectory, rather than relying solely on the single final checkpoint.
                     </div>
                     <div class="research-image">
                         <img src="image/Temporal_Sampling.jpg" alt="Temporal Sampling Overview" onerror="this.style.display='none'">
@@ -495,7 +497,7 @@
                         <a href="https://arxiv.org/pdf/2502.12143">Small Model Learnability Gap</a>
                     </div>
                     <div class="research-description">
-                        We revealed that small models do not consistently benefit from long CoT or distillation from large teachers. Instead, they perform better on shorter, simpler reasoning chains that better align with their intrinsic learning capacity.
+                        We revealed that small models do not consistently benefit from long CoT or distillation from large teachers. Instead, they perform better on shorter, simpler reasoning chains that better align with their intrinsic learning capacity. We term this phenomenon as <strong>Small Model Learnability Gap</strong>.
                     </div>
                     <div class="research-image">
                         <img src="image/small_model.png" alt="Small Model Learnability" onerror="this.style.display='none'">
@@ -525,6 +527,9 @@
                 </div>
                 <div class="research-description">
                     We maintained the official Magpie Hugging Face repository and released open-sourced synthetic data generated from open-source LLMs. Our aligned MagpieLM models are still <strong>SOTA</strong> small language models for chat.
+                </div>
+                <div class="research-image">
+                    <img src="image/MagpieLM.jpg" alt="MagpieLM" onerror="this.style.display='none'">
                 </div>
             </div>
 
