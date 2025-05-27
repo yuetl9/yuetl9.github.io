@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yuetai Li - PhD Student at University of Washington</title>
+    <title>Yuetai Li</title>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,17 +16,12 @@
     <style>
         :root {
             --primary: #007bff;
-            --primary-light: #0056b3;
-            --text-primary: #1f2937;
+            --primary-light: #3b82f6;
+            --text-primary: #374151;
             --text-secondary: #6b7280;
-            --text-muted: #9ca3af;
-            --bg-white: #ffffff;
-            --bg-gray: #f8fafc;
-            --border: #e5e7eb;
-            --border-light: #f3f4f6;
-            --red: #dc2626;
-            --green: #059669;
-            --amber: #d97706;
+            --text-light: #9ca3af;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8fafc;
         }
 
         * {
@@ -39,127 +34,162 @@
             font-family: 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.6;
             color: var(--text-primary);
-            background: var(--bg-gray);
+            background: var(--bg-secondary);
+            padding: 3rem 2rem;
         }
 
         .container {
             max-width: 900px;
             margin: 0 auto;
-            padding: 2rem 1.5rem;
         }
 
-        /* Header */
-        .header {
-            background: var(--bg-white);
-            border: 1px solid var(--border-light);
-            border-radius: 12px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
-        }
-
-        .profile-section {
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            z-index: 1000;
             display: flex;
-            gap: 2rem;
+            gap: 1rem;
+        }
+
+        .nav-btn {
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            text-decoration: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 4px 0 rgb(0 0 0 / 0.1);
+            border: 1px solid #e5e7eb;
+        }
+
+        .nav-btn:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px 0 rgb(0 0 0 / 0.15);
+        }
+
+        .nav-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Header Section */
+        .header {
+            display: flex;
+            gap: 3rem;
             align-items: flex-start;
+            margin-bottom: 5rem;
+            margin-top: 3rem;
+        }
+
+        .profile-image-container {
+            flex-shrink: 0;
         }
 
         .profile-image {
-            width: 160px;
-            height: 160px;
-            border-radius: 12px;
+            width: 200px;
+            height: 200px;
+            border-radius: 1rem;
             object-fit: cover;
-            flex-shrink: 0;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            box-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            transform: rotate(-3deg);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-image:hover {
+            transform: rotate(2deg) scale(1.05);
         }
 
         .profile-info {
             flex: 1;
+            padding-top: 1rem;
         }
 
         .name {
             font-family: 'Raleway', sans-serif;
-            font-size: 2rem;
+            font-size: 2.8rem;
             font-weight: 600;
             color: var(--text-primary);
             margin-bottom: 0.5rem;
+            line-height: 1.2;
         }
 
         .title {
-            font-size: 1.1rem;
+            font-size: 1.3rem;
             color: var(--text-secondary);
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
         }
 
-        .affiliation {
+        .contact-buttons {
             display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--text-secondary);
-        }
-
-        .logo {
-            width: 24px;
-            height: 24px;
-        }
-
-        .contact-links {
-            display: flex;
-            gap: 1rem;
+            gap: 0.75rem;
             flex-wrap: wrap;
+            margin-bottom: 2rem;
         }
 
-        .contact-link {
+        .contact-btn {
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
+            justify-content: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            background: var(--bg-primary);
             color: var(--text-secondary);
             text-decoration: none;
-            font-size: 0.95rem;
-            transition: color 0.2s ease;
-        }
-
-        .contact-link:hover {
-            color: var(--primary);
-        }
-
-        .cv-link {
-            background: var(--primary);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: background 0.2s ease;
-        }
-
-        .cv-link:hover {
-            background: var(--primary-light);
-        }
-
-        /* Content Sections */
-        .section {
-            background: var(--bg-white);
-            border: 1px solid var(--border-light);
-            border-radius: 12px;
-            padding: 2rem;
-            margin-bottom: 2rem;
+            border-radius: 0.5rem;
+            transition: all 0.2s ease;
             box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
         }
 
+        .contact-btn:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .cv-btn {
+            background: var(--primary);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+        }
+
+        .cv-btn:hover {
+            background: var(--primary-light);
+            transform: translateY(-2px);
+        }
+
+        /* Section styling */
+        .section {
+            margin-bottom: 5rem;
+        }
+
+        .section:last-child {
+            margin-bottom: 0;
+        }
+
         .section-title {
-            font-family: 'Raleway', serif;
-            font-size: 1.75rem;
+            font-family: 'Raleway', sans-serif;
+            font-size: 2.2rem;
             font-weight: 600;
             color: var(--text-primary);
-            margin-bottom: 1.5rem;
+            margin-bottom: 2.5rem;
         }
 
         .about-text {
-            font-size: 1rem;
+            font-size: 1.1rem;
             line-height: 1.7;
-            margin-bottom: 1.25rem;
+            margin-bottom: 1.8rem;
+            color: var(--text-primary);
+            max-width: 750px;
         }
 
         .about-text a {
@@ -172,224 +202,136 @@
             text-decoration: underline;
         }
 
-        .collaboration-note {
-            background: #fef9e7;
-            border-left: 3px solid #f59e0b;
-            padding: 1rem;
-            margin-top: 1.5rem;
+        .highlight-note {
+            background: linear-gradient(135deg, #fef3c7, #fde68a);
+            border-left: 4px solid #f59e0b;
+            padding: 1.8rem;
+            border-radius: 0.5rem;
+            margin: 2.5rem 0;
             font-style: italic;
             color: #92400e;
+            max-width: 650px;
         }
 
-        /* Research Areas */
+        /* Research Sections */
         .research-category {
-            margin-bottom: 2rem;
+            margin-bottom: 4rem;
         }
 
         .research-category:last-child {
             margin-bottom: 0;
         }
 
-        .category-title {
-            font-size: 1.25rem;
+        .category-header {
+            font-family: 'Raleway', sans-serif;
+            font-size: 1.6rem;
             font-weight: 600;
             color: var(--text-primary);
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .category-title i {
-            color: var(--primary);
-        }
-
-        .research-list {
-            list-style: none;
+            margin-bottom: 2.5rem;
         }
 
         .research-item {
-            margin-bottom: 1.5rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid var(--border-light);
+            margin-bottom: 3.5rem;
         }
 
         .research-item:last-child {
             margin-bottom: 0;
-            border-bottom: none;
         }
 
-        .paper-title {
+        .research-title {
+            font-size: 1.3rem;
             font-weight: 600;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
         }
 
-        .paper-title a {
+        .research-title a {
             color: var(--primary);
             text-decoration: none;
         }
 
-        .paper-title a:hover {
+        .research-title a:hover {
             text-decoration: underline;
         }
 
-        .new-badge {
-            background: linear-gradient(135deg, var(--red), #ef4444);
-            color: white;
-            font-size: 0.7rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            padding: 0.2rem 0.5rem;
-            border-radius: 4px;
-            margin-left: 0.5rem;
-            letter-spacing: 0.5px;
-        }
-
-        .paper-description {
+        .research-description {
             color: var(--text-secondary);
-            font-size: 0.95rem;
             line-height: 1.6;
+            margin-bottom: 1.5rem;
+            max-width: 750px;
+            font-size: 1.05rem;
         }
 
-        .paper-venue {
-            color: var(--text-primary);
-            font-weight: 500;
-            font-size: 0.9rem;
-            font-style: italic;
+        .research-image {
+            margin: 2rem 0;
+            max-width: 700px;
+        }
+
+        .research-image img {
+            max-width: 100%;
+            max-height: 350px;
+            object-fit: contain;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
         }
 
         .award-badge {
-            background: var(--primary);
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
             color: white;
-            font-size: 0.7rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            padding: 0.2rem 0.5rem;
-            border-radius: 4px;
-            margin-left: 0.5rem;
-            letter-spacing: 0.5px;
-        }
-
-        /* Publications */
-        .publication-list {
-            list-style: none;
-        }
-
-        .publication-item {
-            margin-bottom: 1.5rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid var(--border-light);
-            position: relative;
-            padding-left: 2.5rem;
-        }
-
-        .publication-item:last-child {
-            border-bottom: none;
-        }
-
-        .publication-item::before {
-            content: counter(publication-counter);
-            counter-increment: publication-counter;
-            position: absolute;
-            left: 0;
-            top: 0;
-            color: var(--text-muted);
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             font-weight: 600;
-            width: 2rem;
+            padding: 0.3rem 0.8rem;
+            border-radius: 1rem;
+            margin-top: 0.5rem;
         }
 
-        .publication-list {
-            counter-reset: publication-counter;
-        }
-
-        .pub-title {
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            font-size: 1rem;
-        }
-
-        .pub-authors {
+        .venue-info {
             color: var(--text-secondary);
-            margin-bottom: 0.25rem;
-            font-size: 0.95rem;
-        }
-
-        .pub-venue {
-            color: var(--text-primary);
-            font-weight: 500;
-            font-size: 0.9rem;
             font-style: italic;
-        }
-
-        .pub-links {
-            margin-top: 0.75rem;
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-        }
-
-        .pub-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.25rem;
-            background: var(--bg-gray);
-            color: var(--text-secondary);
-            padding: 0.25rem 0.75rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 500;
-            transition: all 0.2s ease;
-            border: 1px solid var(--border);
-        }
-
-        .pub-link:hover {
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary);
+            margin-top: 0.5rem;
         }
 
         /* Mobile Responsive */
         @media (max-width: 768px) {
-            .container {
-                padding: 1rem;
+            body {
+                padding: 2rem 1rem;
             }
 
-            .profile-section {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .profile-image {
-                width: 120px;
-                height: 120px;
-                margin: 0 auto;
-            }
-
-            .name {
-                font-size: 1.75rem;
-            }
-
-            .section {
-                padding: 1.5rem;
-            }
-
-            .section-title {
-                font-size: 1.5rem;
-            }
-
-            .contact-links {
+            .nav {
+                position: relative;
+                top: auto;
+                right: auto;
+                margin-bottom: 2rem;
                 justify-content: center;
             }
 
-            .research-item {
+            .header {
                 flex-direction: column;
+                gap: 2rem;
+                align-items: center;
+                text-align: center;
+                margin-top: 1rem;
             }
 
-            .research-image {
-                width: 100%;
-                height: 150px;
+            .profile-info {
+                padding-top: 0;
+            }
+
+            .name {
+                font-size: 2.2rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .profile-image {
+                width: 160px;
+                height: 160px;
+            }
+
+            .contact-buttons {
+                justify-content: center;
             }
         }
 
@@ -403,69 +345,41 @@
             background: var(--primary);
             color: white;
         }
-
-        /* 为研究图片添加合适的尺寸 */
-        .research-image {
-            width: 100%;
-            max-width: 600px;
-            margin: 15px auto;
-            text-align: center;
-        }
-        
-        .research-image img {
-            max-width: 100%;
-            max-height: 250px;
-            object-fit: contain;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .research-content a {
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 500;
-        }
-        
-        .research-content a:hover {
-            text-decoration: underline;
-        }
     </style>
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="#" class="nav-btn active">Home</a>
+        <a href="javascript:void(0)" onclick="showPublications()" class="nav-btn">Publications</a>
+    </nav>
+
     <div class="container">
-        <!-- Header Section -->
-        <div class="header">
-            <div class="profile-section">
+        <!-- Header -->
+        <header class="header">
+            <div class="profile-image-container">
                 <img src="/image/profile.jpg" alt="Yuetai Li" class="profile-image" 
                      onerror="this.src='/img/profile.png'">
+            </div>
+            
+            <div class="profile-info">
+                <h1 class="name">Yuetai Li</h1>
+                <div class="title">PhD Student at University of Washington</div>
                 
-                <div class="profile-info">
-                    <h1 class="name">Yuetai Li</h1>
-                    <div class="title">PhD Student</div>
-                    <div class="affiliation">
-                        <img src="image/UW_logo.jpg" alt="UW Logo" class="logo">
-                        University of Washington
-                    </div>
-                    
-                    <div class="contact-links">
-                        <a href="mailto:yuetaili@uw.edu" class="contact-link">
-                            <i class="fas fa-envelope"></i>
-                            yuetaili@uw.edu
-                        </a>
-                        <a href="mailto:yuetail9@163.com" class="contact-link">
-                            <i class="fas fa-envelope"></i>
-                            yuetail9@163.com
-                        </a>
-                        <a href="/files/cv.pdf" class="cv-link" target="_blank">
-                          CV
-                      </a>
-                    </div>
+                <div class="contact-buttons">
+                    <a href="mailto:yuetaili@uw.edu" class="contact-btn" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="mailto:yuetail9@163.com" class="contact-btn" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="/files/cv.pdf" class="cv-btn" target="_blank">CV</a>
                 </div>
             </div>
-        </div>
+        </header>
 
         <!-- About Section -->
-        <div class="section">
+        <section class="section">
             <h2 class="section-title">About Me</h2>
             
             <p class="about-text">
@@ -492,226 +406,103 @@
                 I will be interning at Microsoft Research (Redmond) in Summer 2025.
             </p>
 
-            <div class="collaboration-note">
+            <div class="highlight-note">
                 I am open to collaboration and discuss interesting ideas! Email yuetaili@uw.edu if you would like to share any opportunities, collaborations, or just chat～
             </div>
-        </div>
+        </section>
 
         <!-- Research Interests -->
-        <div class="section">
+        <section class="section">
             <h2 class="section-title">Research Interests</h2>
             
             <p class="about-text">
                 My primary interests lie broadly in <strong>LLM Reasoning</strong>, <strong>Synthetic Dataset</strong>, 
                 and <strong>Trustworthy AI</strong>. I am particularly interested in: (1) understanding the reasoning 
                 capabilities of LLMs through rigorous analysis (2) investigating synthetic datasets optimized for 
-                effective model learning. My current research directions include:
+                effective model learning.
             </p>
 
             <div class="research-category">
-                <h3 class="category-title">
-                    Reasoning and Synthetic Dataset
-                </h3>
-                <ul class="research-list">
-                    <li class="research-item">
-                        <div class="research-content">
-                            <div class="paper-title">
-                                <a href="https://arxiv.org/pdf/2505.14625">TinyV</a>
-                            </div>
-                            <div class="paper-description">
-                                Our study reveals that over 38% of model responses suffer from false negatives in answer verification for RL training of LLMs, severely impairing training efficiency. We propose TinyV, a lightweight LLM-based verifier that augments existing rule-based methods to provide more accurate reward estimates.
-                            </div>
-                            <div class="research-image">
-                              <img src="image/TinyV.jpg" alt="TinyV Overview" onerror="this.style.display='none'">
-                          </div>
-                        </div>
-                    </li>
-                    <li class="research-item">
-                        <div class="research-content">
-                            <div class="paper-title">
-                                <a href="https://arxiv.org/pdf/2502.12143">Small Model Learnability Gap</a>
-                            </div>
-                            <div class="paper-description">
-                                We revealed that small models do not consistently benefit from long CoT or distillation from large teachers. Instead, they perform better on shorter, simpler reasoning chains that better align with their intrinsic learning capacity. We propose Mix Distillation, a simple yet effective strategy that combines both long and short CoT examples or reasoning from both large and small teachers.
-                            </div>
-                            <div class="research-image">
-                              <img src="image/small_model.png" alt="Small Model Learnability" onerror="this.style.display='none'">
-                          </div>
-                        </div>
-                    </li>
-                    <li class="research-item">
-                        <div class="research-content">
-                            <div class="paper-title">
-                                <a href="https://arxiv.org/abs/2502.12025">SafeChain</a>
-                            </div>
-                            <div class="paper-description">
-                                We investigated how long CoT impacts safety and revealed that long CoT does not necessarily enhance safety. We introduced SafeChain, a dataset designed to improve safety alignment while preserving reasoning capabilities.
-                            </div>
-                            <div class="paper-venue">
-                                <em style="color: #A52A2A;">ICLR BiAlign Workshop (Oral)</em>
-                                <span class="award-badge">🏆 Best Honorable Mention</span>
-                            </div>
-                            <div class="research-image">
-                              <img src="image/safechain.jpg" alt="SafeChain" onerror="this.style.display='none'">
-                          </div>
-                        </div>
-                    </li>
-                    <li class="research-item">
-                      <div class="research-image">
-                          <img src="/path/to/magpie-teaser.png" alt="MagpieLM" onerror="this.style.display='none'">
-                      </div>
-                      <div class="research-content">
-                          <div class="paper-title">
-                              <a href="https://huggingface.co/collections/Magpie-Align/magpielm-66e2221f31fa3bf05b10786a">MagpieLM</a>
-                          </div>
-                          <div class="paper-description">
-                              We maintained the official Magpie Hugging Face repository and released open-sourced synthetic data generated from open-source LLMs. Our aligned MagpieLM models are still <strong>SOTA</strong> small language models for chat.
-                          </div>
-                      </div>
-                  </li>
-                </ul>
+                <h3 class="category-header">Reasoning and Synthetic Dataset</h3>
+                
+                <div class="research-item">
+                    <div class="research-title">
+                        <a href="https://arxiv.org/pdf/2505.14625">TinyV</a>
+                    </div>
+                    <div class="research-description">
+                        Our study reveals that over 38% of model responses suffer from false negatives in answer verification for RL training of LLMs, severely impairing training efficiency. We propose TinyV, a lightweight LLM-based verifier that augments existing rule-based methods to provide more accurate reward estimates.
+                    </div>
+                    <div class="research-image">
+                        <img src="image/TinyV.jpg" alt="TinyV Overview" onerror="this.style.display='none'">
+                    </div>
+                </div>
+
+                <div class="research-item">
+                    <div class="research-title">
+                        <a href="https://arxiv.org/pdf/2502.12143">Small Model Learnability Gap</a>
+                    </div>
+                    <div class="research-description">
+                        We revealed that small models do not consistently benefit from long CoT or distillation from large teachers. Instead, they perform better on shorter, simpler reasoning chains that better align with their intrinsic learning capacity.
+                    </div>
+                    <div class="research-image">
+                        <img src="image/small_model.png" alt="Small Model Learnability" onerror="this.style.display='none'">
+                    </div>
+                </div>
+
+                <div class="research-item">
+                    <div class="research-title">
+                        <a href="https://arxiv.org/abs/2502.12025">SafeChain</a>
+                    </div>
+                    <div class="research-description">
+                        We investigated how long CoT impacts safety and revealed that long CoT does not necessarily enhance safety. We introduced SafeChain, a dataset designed to improve safety alignment while preserving reasoning capabilities.
+                    </div>
+                    <div class="venue-info">
+                        ICLR BiAlign Workshop (Oral)
+                        <span class="award-badge">🏆 Best Honorable Mention</span>
+                    </div>
+                    <div class="research-image">
+                        <img src="image/safechain.jpg" alt="SafeChain" onerror="this.style.display='none'">
+                    </div>
+                </div>
             </div>
 
             <div class="research-category">
-                <h3 class="category-title">
-                    Trustworthy AI
-                </h3>
-                <ul class="research-list">
-                    <li class="research-item">
-                        <div class="research-content">
-                            <div class="paper-title">
-                                <a href="https://arxiv.org/abs/2406.12257">CleanGen</a>
-                            </div>
-                            <div class="paper-description">
-                                A novel decoding algorithm that defends against various generative backdoor attacks, including advertisement injection, code injection, and malicious content generation.
-                            </div>
-                        </div>
-                        <div class="research-image">
-                          <img src="image/CleanGen.jpg" alt="CleanGen" onerror="this.style.display='none'">
-                      </div>
-                    </li>
-                    <li class="research-item">
-                        <div class="research-image">
-                            <img src="/path/to/spectral-teaser.png" alt="Spectral Aggregation" onerror="this.style.display='none'">
-                        </div>
-                        <div class="research-content">
-                            <div class="paper-title">
-                                <a href="https://yuetl9.github.io/">Spectral Aggregation</a>
-                            </div>
-                            <div class="paper-description">
-                                A novel defense mechanism to aggregate the spectral features of multilayers to detect poisoned samples, restoring the effectiveness of the latent separability assumption in adaptive backdoor attacks.
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+                <h3 class="category-header">Trustworthy AI</h3>
+                
+                <div class="research-item">
+                    <div class="research-title">
+                        <a href="https://arxiv.org/abs/2406.12257">CleanGen</a>
+                    </div>
+                    <div class="research-description">
+                        A novel decoding algorithm that defends against various generative backdoor attacks, including advertisement injection, code injection, and malicious content generation.
+                    </div>
+                    <div class="research-image">
+                        <img src="image/CleanGen.jpg" alt="CleanGen" onerror="this.style.display='none'">
+                    </div>
+                </div>
             </div>
 
             <div class="research-category">
-                <h3 class="category-title">
-                    Distributed Algorithms
-                </h3>
-                <ul class="research-list">
-                    <li class="research-item">
-                        <div class="research-image">
-                            <img src="/path/to/distributed-teaser.png" alt="Distributed Algorithms" onerror="this.style.display='none'">
-                        </div>
-                        <div class="research-content">
-                            <div class="paper-description">
-                                Work includes <a href="https://ieeexplore.ieee.org/document/10177399">Voting Validity</a>, 
-                                <a href="https://ieeexplore.ieee.org/document/10071537">Wireless Distributed Consensus</a>, 
-                                <a href="https://ieeexplore.ieee.org/document/10194560">Resource Allocation</a>, and 
-                                <a href="https://arxiv.org/pdf/2502.12069">Distributed Consensus Network</a>.
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+                <h3 class="category-header">Distributed Algorithms</h3>
+                
+                <div class="research-item">
+                    <div class="research-description">
+                        Work includes <a href="https://ieeexplore.ieee.org/document/10177399">Voting Validity</a>, 
+                        <a href="https://ieeexplore.ieee.org/document/10071537">Wireless Distributed Consensus</a>, 
+                        <a href="https://ieeexplore.ieee.org/document/10194560">Resource Allocation</a>, and 
+                        <a href="https://arxiv.org/pdf/2502.12069">Distributed Consensus Network</a>.
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <!-- Publications -->
-        <div class="section">
-            <h2 class="section-title">Selected Publications</h2>
-            
-            <ol class="publication-list">
-                <li class="publication-item">
-                    <div class="pub-title">
-                        TinyV: Reducing False Negatives in Verification Improves RL for LLM Reasoning
-                    </div>
-                    <div class="pub-authors">
-                        Zhangchen Xu*, <strong>Yuetai Li*</strong>, Fengqing Jiang, Bhaskar Ramasubramanian, Luyao Niu, Bill Yuchen Lin, Radha Poovendran
-                    </div>
-                    <div class="pub-venue">Preprint. (*Equal contribution)</div>
-                    <div class="pub-links">
-                        <a href="#" target="_blank">Paper</a>
-                        <a href="#" target="_blank">Code</a>
-                    </div>
-                </li>
-                <li class="publication-item">
-                    <div class="pub-title">Small Models Struggle to Learn from Strong Reasoners</div>
-                    <div class="pub-authors">
-                        <strong>Yuetai Li</strong>, Xiang Yue, Zhangchen Xu, Fengqing Jiang, Luyao Niu, Bhaskar Ramasubramanian, Bill Yuchen Lin, Radha Poovendran
-                    </div>
-                    <div class="pub-venue">Preprint</div>
-                    <div class="pub-links">
-                        <a href="#" target="_blank">Paper</a>
-                        <a href="#" target="_blank">Code</a>
-                    </div>
-                </li>
-                <li class="publication-item">
-                    <div class="pub-title">SafeChain: Revisiting Safety of Language Model with Long Chain-of-Thought Reasoning Capability</div>
-                    <div class="pub-authors">
-                        Fengqing Jiang, Zhangchen Xu, <strong>Yuetai Li</strong>, Luyao Niu, Zhen Xiang, Bo Li, Bill Yuchen Lin, Radha Poovendran
-                    </div>
-                    <div class="pub-venue">Preprint</div>
-                    <div class="pub-links">
-                        <a href="#" target="_blank">Paper</a>
-                        <a href="#" target="_blank">Code</a>
-                    </div>
-                </li>
-                <li class="publication-item">
-                    <div class="pub-title">CLEANGEN: Mitigating Backdoor Attacks for Generation Tasks in Large Language Models</div>
-                    <div class="pub-authors">
-                        <strong>Yuetai Li</strong>, Zhangchen Xu, Fengqing Jiang, Luyao Niu, Dinuka Sahabandu, Bhaskar Ramasubramanian, Radha Poovendran
-                    </div>
-                    <div class="pub-venue">EMNLP 2024</div>
-                    <div class="pub-links">
-                        <a href="#" target="_blank">Paper</a>
-                        <a href="#" target="_blank">Code</a>
-                    </div>
-                </li>
-                <li class="publication-item">
-                    <div class="pub-title">A Modularized Framework of Communication in Consensus</div>
-                    <div class="pub-authors">
-                        <strong>Yuetai Li</strong>, Zhangchen Xu, Lei Zhang, Jon Crowcroft
-                    </div>
-                    <div class="pub-venue">Submitted to IEEE/ACM Transactions on Networking</div>
-                    <div class="pub-links">
-                        <a href="#" target="_blank">Paper</a>
-                    </div>
-                </li>
-                <li class="publication-item">
-                    <div class="pub-title">Voting Validity: Exact Fault-tolerant Consensus</div>
-                    <div class="pub-authors">
-                        Zhangchen Xu, <strong>Yuetai Li</strong>, Chenglin Feng, Lei Zhang
-                    </div>
-                    <div class="pub-venue">IPDPS 2023</div>
-                    <div class="pub-links">
-                        <a href="#" target="_blank">Paper</a>
-                    </div>
-                </li>
-                <li class="publication-item">
-                    <div class="pub-title">RAFT Consensus Reliability in Wireless Networks: Probabilistic Analysis</div>
-                    <div class="pub-authors">
-                        <strong>Yuetai Li</strong>, Yixuan Fan, Lei Zhang, Jon Crowcroft
-                    </div>
-                    <div class="pub-venue">IEEE Internet of Things Journal, 2023</div>
-                    <div class="pub-links">
-                        <a href="#" target="_blank">Paper</a>
-                    </div>
-                </li>
-            </ol>
-        </div>
+        </section>
     </div>
+
+    <script>
+        function showPublications() {
+            // This would normally navigate to a separate publications page
+            // For this demo, we'll create a simple alert
+            alert('This would navigate to the publications page. In a real implementation, this would be a separate HTML file.');
+        }
+    </script>
 </body>
 </html>
-
