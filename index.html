@@ -419,6 +419,16 @@
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+
+        .research-content a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .research-content a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -532,19 +542,6 @@
                         </div>
                     </li>
                     <li class="research-item">
-                        <div class="research-image">
-                            <img src="/path/to/magpie-teaser.png" alt="MagpieLM" onerror="this.style.display='none'">
-                        </div>
-                        <div class="research-content">
-                            <div class="paper-title">
-                                <a href="https://huggingface.co/collections/Magpie-Align/magpielm-66e2221f31fa3bf05b10786a">MagpieLM</a>
-                            </div>
-                            <div class="paper-description">
-                                We maintained the official Magpie Hugging Face repository and released open-sourced synthetic data generated from open-source LLMs. Our aligned MagpieLM models are still <strong>SOTA</strong> small language models for chat.
-                            </div>
-                        </div>
-                    </li>
-                    <li class="research-item">
                         <div class="research-content">
                             <div class="paper-title">
                                 <a href="https://arxiv.org/abs/2502.12025">SafeChain</a>
@@ -561,6 +558,19 @@
                           </div>
                         </div>
                     </li>
+                    <li class="research-item">
+                      <div class="research-image">
+                          <img src="/path/to/magpie-teaser.png" alt="MagpieLM" onerror="this.style.display='none'">
+                      </div>
+                      <div class="research-content">
+                          <div class="paper-title">
+                              <a href="https://huggingface.co/collections/Magpie-Align/magpielm-66e2221f31fa3bf05b10786a">MagpieLM</a>
+                          </div>
+                          <div class="paper-description">
+                              We maintained the official Magpie Hugging Face repository and released open-sourced synthetic data generated from open-source LLMs. Our aligned MagpieLM models are still <strong>SOTA</strong> small language models for chat.
+                          </div>
+                      </div>
+                  </li>
                 </ul>
             </div>
 
@@ -570,9 +580,6 @@
                 </h3>
                 <ul class="research-list">
                     <li class="research-item">
-                        <div class="research-image">
-                            <img src="/path/to/cleangen-teaser.png" alt="CleanGen" onerror="this.style.display='none'">
-                        </div>
                         <div class="research-content">
                             <div class="paper-title">
                                 <a href="https://arxiv.org/abs/2406.12257">CleanGen</a>
@@ -581,6 +588,9 @@
                                 A novel decoding algorithm that defends against various generative backdoor attacks, including advertisement injection, code injection, and malicious content generation.
                             </div>
                         </div>
+                        <div class="research-image">
+                          <img src="image/CleanGen.jpg" alt="CleanGen" onerror="this.style.display='none'">
+                      </div>
                     </li>
                     <li class="research-item">
                         <div class="research-image">
