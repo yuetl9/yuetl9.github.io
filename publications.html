@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuetai Li - Publications</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #007bff;
+            --primary-light: #3b82f6;
+            --text-primary: #374151;
+            --text-secondary: #6b7280;
+            --text-light: #9ca3af;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8fafc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-secondary);
+            padding: 3rem 2rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            z-index: 1000;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-btn {
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            text-decoration: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 4px 0 rgb(0 0 0 / 0.1);
+            border: 1px solid #e5e7eb;
+            cursor: pointer;
+        }
+
+        .nav-btn:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px 0 rgb(0 0 0 / 0.15);
+        }
+
+        .nav-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Header */
+        .page-header {
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .page-title {
+            font-family: 'Comfortaa', 'Nunito', system-ui, sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .page-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .scholar-note {
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        .scholar-note a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .scholar-note a:hover {
+            text-decoration: underline;
+        }
+
+        /* Equal contribution note */
+        .contribution-note {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        /* Year sections */
+        .year-section {
+            margin-bottom: 3rem;
+        }
+
+        .year-title {
+            font-family: 'Nunito', system-ui, sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        /* Paper blocks */
+        .paper-block {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .paper-block:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .paper-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            line-height: 1.4;
+            margin-bottom: 0.8rem;
+            color: var(--text-primary);
+        }
+
+        .paper-authors {
+            color: var(--text-secondary);
+            margin-bottom: 0.6rem;
+            font-size: 1rem;
+        }
+
+        .paper-authors u {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .paper-venue {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .paper-venue strong {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .paper-links {
+            display: flex;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .paper-links a {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .paper-links a:hover {
+            text-decoration: underline;
+        }
+
+        .citation-count {
+            background: #f0f9ff;
+            color: var(--primary);
+            padding: 0.2rem 0.6rem;
+            border-radius: 0.3rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: none;
+        }
+
+        .award-badge {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 0.3rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding: 2rem 1rem;
+            }
+
+            .nav {
+                position: relative;
+                top: auto;
+                right: auto;
+                margin-bottom: 2rem;
+                justify-content: center;
+            }
+
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .page-header {
+                margin-top: 1rem;
+            }
+
+            .paper-links {
+                gap: 0.5rem;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Selection */
+        ::selection {
+            background: var(--primary);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <button class="nav-btn" onclick="showHome()">Home</button>
+        <button class="nav-btn active">Publications</button>
+    </nav>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="page-header">
+            <h1 class="page-title">Publications</h1>
+            <p class="page-subtitle">
+                * denotes equal contribution
+            </p>
+            <p class="scholar-note">
+                (see <a href="https://scholar.google.com/citations?user=6Sof_XAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a> for the latest update)
+            </p>
+        </header>
+
+        <!-- 2025 -->
+        <section class="year-section">
+            <h2 class="year-title">2025</h2>
+
+            <div class="paper-block">
+                <p class="paper-title"><strong>Temporal Sampling for Forgotten Reasoning in LLMs</strong></p>
+                <p class="paper-authors"> <u>Yuetai Li*</u>, Zhangchen Xu*, Fengqing Jiang, Bhaskar Ramasubramanian, Luyao Niu, Bill Yuchen Lin, Xiang Yue, Radha Poovendran</p>
+                <p class="paper-venue">arXiv preprint arXiv:2505.20196</p>
+                <div class="paper-links">
+                    <a href="https://arxiv.org/abs/2505.20196" target="_blank" rel="noopener noreferrer">Paper</a>
+                    <a href="https://github.com/uw-nsl/Temporal_Forgetting" target="_blank" rel="noopener noreferrer">Code</a>
+                </div>
+            </div>
+
+            <div class="paper-block">
+                <p class="paper-title"><strong>SOSBENCH: Benchmarking Safety Alignment on Scientific Knowledge</strong></p>
+                <p class="paper-authors">Fengqing Jiang, Fengbo Ma, Zhangchen Xu, <u>Yuetai Li</u>, Bhaskar Ramasubramanian, Luyao Niu, Bo Li, Xianyan Chen, Zhen Xiang, Radha Poovendran</p>
+                <p class="paper-venue">arXiv preprint arXiv:2505.14625</p>
+                <div class="paper-links">
+                    <a href="https://arxiv.org/abs/2505.21605" target="_blank" rel="noopener noreferrer">Paper</a>
+                    <a href="https://github.com/SOSBench/SOSBenchEval" target="_blank" rel="noopener noreferrer">Code</a>
+                </div>
+            </div>
+
+            <div class="paper-block">
+                <p class="paper-title"><strong>TinyV: Reducing False Negatives in Verification Improves RL for LLM Reasoning</strong></p>
+                <p class="paper-authors">Zhangchen Xu*, <u>Yuetai Li*</u>, Fengqing Jiang, Bhaskar Ramasubramanian, Luyao Niu, Bill Yuchen Lin, Radha Poovendran</p>
+                <p class="paper-venue">arXiv preprint arXiv:2505.14625</p>
+                <div class="paper-links">
+                    <a href="https://arxiv.org/abs/2505.14625" target="_blank" rel="noopener noreferrer">Paper</a>
+                    <a href="https://github.com/uw-nsl/TinyV" target="_blank" rel="noopener noreferrer">Code</a>
+                </div>
+            </div>
+
+            <div class="paper-block">
+                <p class="paper-title"><strong>Small Models Struggle to Learn from Strong Reasoners</strong></p>
+                <p class="paper-authors"><u>Yuetai Li</u>, Xiang Yue, Zhangchen Xu, Fengqing Jiang, Luyao Niu, Bill Yuchen Lin, Bhaskar Ramasubramanian, Radha Poovendran</p>
+                <p class="paper-venue">arXiv preprint arXiv:2502.12143</p>
+                <div class="paper-links">
+                    <a href="https://arxiv.org/abs/2502.12143" target="_blank" rel="noopener noreferrer">Paper</a>
+                    <a href="https://small-model-gap.github.io/" target="_blank" rel="noopener noreferrer">Code</a>
+                </div>
+            </div>
+
+            <div class="paper-block">
+                <p class="paper-title"><strong>SafeChain: Safety of Language Models with Long Chain-of-Thought Reasoning Capabilities</strong></p>
+                <p class="paper-authors">Fengqing Jiang, Zhangchen Xu, <u>Yuetai Li</u>, Luyao Niu, Zhen Xiang, Bo Li, Bill Yuchen Lin, Radha Poovendran</p>
+                <p class="paper-venue">arXiv preprint arXiv:2502.12025</p>
+                <div class="paper-links">
+                    <a href="https://arxiv.org/abs/2502.12025" target="_blank" rel="noopener noreferrer">Paper</a>
+                    <a href="https://safe-chain.github.io/" target="_blank" rel="noopener noreferrer">Code</a>
+                </div>
+                <p class="paper-venue">Also presented at <strong>ICLR 2025 BiAlign Workshop (Oral)</strong> <span class="award-badge">🏆 Best Honorable Mention</span></p>
+            </div>
+
+            <div class="paper-block">
+                <p class="paper-title"><strong>Distributed Consensus Network: A Modularized Communication Framework and Reliability Probabilistic Analysis</strong></p>
+                <p class="paper-authors"><u>Yuetai Li</u>, Zhangchen Xu, Yiqi Wang, Zihan Zhou, Lei Zhang, Jon Crowcroft</p>
+                <p class="paper-venue">arXiv preprint arXiv:2502.12069</p>
+                <div class="paper-links">
+                    <a href="https://arxiv.org/abs/2502.12069" target="_blank" rel="noopener noreferrer">Paper</a>
+                </div>
+            </div>
+
+
+        <!-- 2024 -->
+        <section class="year-section">
+            <h2 class="year-title">2024</h2>
+            
+            <div class="paper-block">
+                <p class="paper-title"><strong>CleanGen: Mitigating Backdoor Attacks for Generation Tasks in Large Language Models</strong></p>
+                <p class="paper-authors"><u>Yuetai Li</u>, Zhangchen Xu, Fengqing Jiang, Luyao Niu, Dinuka Sahabandu, Bhaskar Ramasubramanian, Radha Poovendran</p>
+                <p class="paper-venue"><strong>EMNLP 2024</strong></p>
+                <div class="paper-links">
+                    <a href="https://arxiv.org/abs/2406.12257" target="_blank" rel="noopener noreferrer">Paper</a>
+                    <a href="https://github.com/uw-nsl/CleanGen" target="_blank" rel="noopener noreferrer">Code</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2023 -->
+        <section class="year-section">
+            <h2 class="year-title">2023</h2>
+            
+            <div class="paper-block">
+                <p class="paper-title"><strong>RAFT Consensus Reliability in Wireless Networks: Probabilistic Analysis</strong></p>
+                <p class="paper-authors"><u>Yuetai Li</u>, Yixuan Fan, Lei Zhang, Jon Crowcroft</p>
+                <p class="paper-venue"><strong>IEEE Internet of Things Journal</strong> 10 (14), 12839-12853</p>
+                <div class="paper-links">
+                    <a href="https://ieeexplore.ieee.org/document/10071537" target="_blank" rel="noopener noreferrer">Paper</a>
+                    <span class="citation-count">28 citations</span>
+                </div>
+            </div>
+
+            <div class="paper-block">
+                <p class="paper-title"><strong>Exact Fault-Tolerant Consensus with Voting Validity</strong></p>
+                <p class="paper-authors">Zhangchen Xu, <u>Yuetai Li</u>, Chenglin Feng, Lei Zhang</p>
+                <p class="paper-venue"><strong>2023 IEEE International Parallel and Distributed Processing Symposium (IPDPS)</strong></p>
+                <div class="paper-links">
+                    <a href="https://ieeexplore.ieee.org/document/10177399" target="_blank" rel="noopener noreferrer">Paper</a>
+                    <span class="citation-count">5 citations</span>
+                </div>
+            </div>
+
+            <div class="paper-block">
+                <p class="paper-title"><strong>Communication Resource Allocation of RAFT in Wireless Network</strong></p>
+                <p class="paper-authors">Dongyang Yu, Yixuan Sun, <u>Yuetai Li</u>, Lei Zhang, Muhammad Ali Imran</p>
+                <p class="paper-venue"><strong>IEEE Sensors Journal</strong> 23 (17), 19398-19408</p>
+                <div class="paper-links">
+                    <a href="https://ieeexplore.ieee.org/document/10177399" target="_blank" rel="noopener noreferrer">Paper</a>
+                    <span class="citation-count">5 citations</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2022 -->
+        <section class="year-section">
+            <h2 class="year-title">2022</h2>
+            
+            <div class="paper-block">
+                <p class="paper-title"><strong>Three-Mirror System Design for Shaping the Elliptical Beam of a Laser Diode</strong></p>
+                <p class="paper-authors"><u>Yuetai Li</u>, Bangzheng Pan, Ting Tong, Haiyang Yang, Ping Jiang, Weihu Caiyang</p>
+                <p class="paper-venue"><strong>Optik</strong> 264, 169449</p>
+                <div class="paper-links">
+                    <a href="https://www.sciencedirect.com/science/article/pii/S0030402622008652" target="_blank" rel="noopener noreferrer">Paper</a>
+                    <span class="citation-count">4 citations</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2021 -->
+        <section class="year-section">
+            <h2 class="year-title">2021</h2>
+            
+            <div class="paper-block">
+                <p class="paper-title"><strong>Shaping and Transmitting Elliptical Beam from Laser Diode by Off-Axis Quadric Reflective Mirrors</strong></p>
+                <p class="paper-authors"><u>Yuetai Li</u>, Xiaolan Chen, Jing Wang, Ting Zhan, Haiyang Yang, Weihu Caiyang, Ping Jiang</p>
+                <p class="paper-venue"><strong>Optics Communications</strong> 493, 126989</p>
+                <div class="paper-links">
+                    <a href="https://www.sciencedirect.com/science/article/pii/S0030401821003400" target="_blank" rel="noopener noreferrer">Paper</a>
+                    <span class="citation-count">12 citations</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function showHome() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
