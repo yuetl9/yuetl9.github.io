@@ -306,6 +306,13 @@
             margin: 0 auto;
         }
 
+        /* 为特定图片设置更大的尺寸 */
+        .research-image img[src*="vsphix_teaser.jpg"],
+        .research-image img[src*="math_transferability_teaser.jpg"] {
+            max-width: 100%;
+            max-height: 500px;
+        }
+
         .award-badge {
             display: inline-block;
             background: linear-gradient(135deg, var(--primary), var(--primary-light));
@@ -498,9 +505,8 @@
                         <a href="https://arxiv.org/abs/2507.00432">Math Transferability</a>
                     </div>
                     <div class="research-description">
-                        Impact of SFT and RL using math-only training queries on the same base model. Performance improvements are measured relative to the base model. While SFT Math-trained models
-                        partially generalize to other reasoning tasks, they show limited transfer to non-reasoning tasks. In contrast,
-                        RL Math-trained models exhibit broader generalization across both reasoning and non-reasoning scenarios.
+                        We find that models RL on math tasks generalize well across non-reasoning domains such as alignment, while SFT models lose such capacity. Latent-space representation and token-space distribution shift analyses reveal that SFT induces substantial representation and output drift, while RL preserves general-domain structure. We finally show that sampling policy is key to generalization: off-policy RL on reasoning tasks compromise non-reasoning performance while on-policy SFT generalizes well.
+
                     </div>
                     <div class="research-image">
                         <img src="image/math_transferability_teaser.jpg" alt="Math Transferability" onerror="this.style.display='none'">
