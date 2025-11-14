@@ -482,14 +482,14 @@
 
 
             <div class="research-category">
-                <h3 class="category-header">Reasoning and Synthetic Dataset</h3>
+                <h3 class="category-header">Reasoning and Agent</h3>
 
 
 
 
                 <div class="research-item">
                     <div class="research-title">
-                        <a href="https://arxiv.org/pdf/2502.12143">Small Model Learnability Gap</a>
+                        <a href="https://arxiv.org/abs/2502.12143">Small Model Learnability Gap</a>
                     </div>
                     <div class="research-description">
                         We revealed that small models do not consistently benefit from long CoT or distillation from large teachers. Instead, they perform better on shorter, simpler reasoning chains that better align with their intrinsic learning capacity. We term this phenomenon as <strong>Small Model Learnability Gap</strong>.
@@ -513,17 +513,16 @@
                     </div>
                 </div>
 
-
-
                 <div class="research-item">
                     <div class="research-title">
-                        <a href="https://arxiv.org/abs/2505.20196">Temporal Forgetting</a>
+                        <a href="https://arxiv.org/abs/2511.01824">Simulated Env for Agent Training</a>
                     </div>
                     <div class="research-description">
-                        We observed that during RL training process of Deepseek-R1-1.5B model, 76.7% of AIME problems were solved correctly at some intermediate checkpoint, yet only 30% remained correct in the final model. This indicates that many problems answered correctly during training were ultimately incorrect in the final checkpoint. We term this phenomenon as <strong>Temporal Forgetting</strong>. Inspired by this, we proposed <strong>Temporal Sampling</strong>: This method utilizes training dynamics as a source of answer diversity by distributing inference samples across multiple distinct checkpoints from the training trajectory, rather than relying solely on the single final checkpoint.
+                        We demonstrate that LLMs can simulate realistic environment feedback without access to actual testbed data or APIs. Inspired by this, we propose two frameworks: Simia-SFT, a pipeline that synthesizes SFT data by amplifying small seed sets into diverse trajectories in an environment-agnostic manner, and Simia-RL, a framework that enables RL training without real environment implementations through LLM-simulated feedback.
+
                     </div>
                     <div class="research-image">
-                        <img src="image/Temporal_Sampling.jpg" alt="Temporal Sampling Overview" onerror="this.style.display='none'">
+                        <img src="image/simia_teaser.jpg" alt="Simulated Env for Agent Training" onerror="this.style.display='none'">
                     </div>
                 </div>
 
@@ -544,6 +543,37 @@
                     </div>
                 </div>
             </div>
+
+            <div class="research-item">
+                    <div class="research-title">
+                        <a href="https://arxiv.org/abs/2510.18003v1">BadScientist</a>
+                    </div>
+                    <div class="research-description">
+                        The convergence of LLM-powered research assistants and AI-based peer review systems creates a critical vulnerability: fully automated publication loops where AI-generated research is evaluated by AI reviewers without human oversight. We investigate this through BadScientist, a framework that evaluates whether fabrication-oriented paper generation agents can deceive multi-model LLM review systems.
+                    </div>
+                    <div class="venue-info">
+                        <span class="venue-highlight">Agents4Science 2025</span>
+                        <span class="award-badge">🏆 Best Paper Award</span>
+                    </div>
+                    <div class="research-image">
+                        <img src="image/badscientist.jpg" alt="BadScientist" onerror="this.style.display='none'">
+                    </div>
+                </div>
+            </div>
+
+            <div class="research-item">
+                    <div class="research-title">
+                        <a href="https://arxiv.org/abs/2505.20196">Temporal Forgetting</a>
+                    </div>
+                    <div class="research-description">
+                        We observed that during RL training process of Deepseek-R1-1.5B model, 76.7% of AIME problems were solved correctly at some intermediate checkpoint, yet only 30% remained correct in the final model. This indicates that many problems answered correctly during training were ultimately incorrect in the final checkpoint. We term this phenomenon as <strong>Temporal Forgetting</strong>. Inspired by this, we proposed <strong>Temporal Sampling</strong>: This method utilizes training dynamics as a source of answer diversity by distributing inference samples across multiple distinct checkpoints from the training trajectory, rather than relying solely on the single final checkpoint.
+                    </div>
+                    <div class="research-image">
+                        <img src="image/Temporal_Sampling.jpg" alt="Temporal Sampling Overview" onerror="this.style.display='none'">
+                    </div>
+                </div>
+
+
 
                 <div class="research-item">
                     <div class="research-title">
@@ -597,6 +627,20 @@
                         <img src="image/CleanGen.jpg" alt="CleanGen" onerror="this.style.display='none'">
                     </div>
                 </div>
+
+                <div class="research-item">
+                    <div class="research-title">
+                        <a href="https://arxiv.org/pdf/2505.21605">SOSBench</a>
+                    </div>
+                    <div class="research-description">
+                        We introduce SOSBench, a regulation-grounded, hazard-focused benchmark encompassing six high-risk scientific domains: chemistry, biology, medicine, pharmacology, physics, and psychology. The benchmark comprises 3,000 prompts derived from real-world regulations and laws, systematically expanded via an LLM-assisted evolutionary pipeline that introduces diverse, realistic misuse scenarios (e.g., detailed explosive synthesis instructions involving advanced chemical formulas).
+                    </div>
+                    <div class="research-image">
+                        <img src="image/SOSBench.jpg" alt="SOSBench" onerror="this.style.display='none'">
+                    </div>
+                </div>
+
+
             </div>
 
             <div class="research-category">
