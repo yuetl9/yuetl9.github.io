@@ -219,6 +219,33 @@
             text-decoration: underline;
         }
 
+        .timeline-list {
+            list-style: none;
+            max-width: 750px;
+            margin-bottom: 1.8rem;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--text-primary);
+        }
+
+        .timeline-item i {
+            position: absolute;
+            left: 0;
+            top: 0.45rem;
+            color: var(--primary);
+            font-size: 0.95rem;
+        }
+
+        .timeline-item .time-tag {
+            color: var(--text-secondary);
+        }
+
         .highlight-note {
             background: linear-gradient(135deg, #fef3c7, #fde68a);
             border-left: 4px solid #f59e0b;
@@ -439,15 +466,15 @@
             <h2 class="section-title">About Me</h2>
             
             <p class="about-text">
-                I am a second-year PhD student at 
+                I am a third-year PhD student at 
                 <a href="https://labs.ece.uw.edu/nsl/faculty/radha/" target="_blank">Network Security Lab</a> 
                 at University of Washington, advised by 
                 <a href="https://people.ece.uw.edu/radha/" target="_blank">Prof. Radha Poovendran</a>. 
                 I am fortunate to work closely with 
                 <a href="https://xiangyue9607.github.io/" target="_blank">Dr. Xiang Yue</a> at CMU LTI, 
                 <a href="https://zhangchenxu.com/">Zhangchen Xu</a>, 
-                <a href="https://luyaoniu.github.io/">Prof. Luyao Niu</a>, and 
-                <a href="https://yuchenlin.xyz/">Prof. Bill Yuchen Lin</a> at UW.
+                <a href="https://luyaoniu.github.io/">Luyao Niu</a>, and 
+                <a href="https://yuchenlin.xyz/">Bill Yuchen Lin</a> at UW.
             </p>
 
             <p class="about-text">
@@ -458,13 +485,24 @@
                 <a href="https://www.cl.cam.ac.uk/~jac22/">Prof. Jon Crowcroft</a> at University of Cambridge.
             </p>
 
-            <p class="about-text">
-                Interned at Microsoft Research Redmond (Agent Env Simulation) in Summer 2025.
-            </p>
-
-            <p class="about-text">
-                Start Internship at Meta MSL in Menlo Park (Agent Eval) from March 2026.
-            </p>
+            <ul class="timeline-list">
+                <li class="timeline-item">
+                    <i class="fas fa-flask"></i>
+                    Interned at <strong>Microsoft Research</strong> (Redmond) working on agent environment simulation. <span class="time-tag">Summer 2025</span>
+                </li>
+                <li class="timeline-item">
+                    <i class="fas fa-flask"></i>
+                    Interned at <strong>Meta Superintelligence Labs</strong> (Menlo Park) working on agent evaluation. <span class="time-tag">March 2026</span>
+                </li>
+                <li class="timeline-item">
+                    <i class="fas fa-flask"></i>
+                    Interning at <strong>MIT-IBM Watson AI Lab</strong> (Cambridge) working on scaling automated research for model training. <span class="time-tag">June – August 2026</span>
+                </li>
+                <li class="timeline-item">
+                    <i class="fas fa-rocket"></i>
+                    Graduating soon! I will join <strong>Meta Superintelligence Labs (MSL)</strong> full-time, working on agent evaluation and synthetic data. <span class="time-tag">August 2026</span>
+                </li>
+            </ul>
 
             <div class="highlight-note">
                 I am open to collaboration and discuss interesting ideas! Email yuetaili@uw.edu if you would like to share any opportunities, collaborations, or just chat～
@@ -476,7 +514,7 @@
             <h2 class="section-title">Research Interests</h2>
             
             <p class="about-text">
-                My research focuses on dataset/benchmark curation for both <strong>Agent-Native</strong> and <strong>Human-Centric</strong> needs: What are the limits of agentic automation? What skills remain uniquely human? What tasks do humans genuinely want agents to do?
+                My research focuses on dataset/benchmark curation for both <strong>Agent-Native</strong> and <strong>Human-Centric</strong> needs: What are the limits of agentic automation? What skills remain uniquely human?
             </p>
 
 
@@ -492,7 +530,10 @@
                     <div class="research-title">
                         <a href="https://job-bench.github.io/">JobBench</a>
                     </div>
-                    <div class="venue-info"><span class="venue-highlight">Aligning Agent Work with Human Will</span></div>
+                    <div class="venue-info">
+                        <span class="venue-highlight">Empower Human Needs Instead of Replacing Them with GDP</span>
+                        <span class="award-badge">🎉 Adopted by Meta Muse Spark 1.1 and Kimi K3</span>
+                    </div>
                     <div class="research-description">
                         Current benchmarks for occupational AI agents are scoped primarily by economic values, telling a replacement story. We introduce JobBench, which evaluates AI agents on the workflows that experts identify as high-priority for delegation, empowering humans based on their needs instead of replacing them with GDP value. JobBench covers 130 agentic tasks across 35 occupations. Each task is packaged as a workspace of heterogeneous reference files, requiring the agent to reason through the cluttered information streams of real professional work. Outputs are graded by a fact-anchored chain of rubrics, averaging 35.6 binary criteria per task. We evaluate 36 models; the strongest, Claude Opus 4.7 under Claude Code, reaches only 45.9%. We hope JobBench shifts the community's target labour-market effect from replacement to enhancement: building agents that do what humans actually want delegated, not only what is most economically valuable.
                     </div>
